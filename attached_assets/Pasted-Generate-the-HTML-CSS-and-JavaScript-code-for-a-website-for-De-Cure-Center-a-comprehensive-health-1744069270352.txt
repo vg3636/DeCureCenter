@@ -1,0 +1,88 @@
+Generate the HTML, CSS, and JavaScript code for a website for De Cure Center, a comprehensive healthcare center, with separate sub-pages for each main service category accessible via a "Services" dropdown in the top menu. The website should adhere to the layout, color scheme, and overall aesthetic of the provided design reference image.
+
+**Technologies:** Use HTML5 for structure, CSS3 for styling, and JavaScript for interactivity (including Google Translate integration and dropdown menu functionality).
+
+**Design Reference Image:**
+
+* **Please analyze the provided image for its layout structure (header with dropdown navigation, main content areas, footer), color palette, typography, and overall visual feel.** Implement these elements using CSS. [**Note to User:** Ensure Replit Agent has access to the design reference image or provide a detailed textual description of its key visual elements.]
+
+**Language Selector (Google Translate):**
+
+* Implement a language selector (e.g., a dropdown) in the header or footer using the Google Translate API. Include the necessary HTML and JavaScript code.
+
+**Page Structure (HTML):**
+
+Create the following HTML files:
+* `index.html` (Homepage)
+* `about.html`
+* `services/index.html` (Main Services Overview Page)
+* `services/alternative-medicine.html`
+* `services/medical-advisory.html`
+* `services/medical-checkup.html`
+* `services/medical-tourism.html`
+* `services/cosmetology-aesthetics.html`
+* `services/plastic-surgery.html`
+* `services/oncology.html`
+* `services/ophthalmology.html`
+* `gallery.html`
+* `contact.html`
+
+Include a consistent header with the top menu (including the "Services" dropdown and language selector) and a consistent footer on all pages.
+
+**Top Menu Navigation (HTML & CSS/JavaScript):**
+
+* Create a top menu with the following items: Home, About Us, Services (as a dropdown), Gallery, Contact Us.
+* The "Services" menu item should be a dropdown that reveals links to each of the service sub-pages: Alternative Medicine, Medical Advisory, Medical Checkup, Medical Tourism, Cosmetology & Aesthetics, Plastic Surgery, Oncology, Ophthalmology.
+* Use CSS and JavaScript to implement the dropdown functionality (e.g., showing/hiding the sub-menu on hover or click).
+
+**Content Integration (HTML):**
+
+* **index.html (Homepage):** (As described in the previous prompt, but ensure "Learn More" buttons link to the correct sub-pages under the `services/` directory).
+* **about.html:** (As described in the previous prompt).
+* **services/index.html (Main Services Overview Page):** Provide a brief overview of all the service categories with links to their respective sub-pages.
+* **services/alternative-medicine.html:**
+    * Headline: Alternative Medicine - De Cure Center
+    * Content: Include the detailed content for Alternative Medicine (Cryolipolysis, EMS, Body Sculpting, Laser Cavitation, Body Contouring Machine, Diode Laser) from the previous prompt.
+* **services/medical-advisory.html:**
+    * Headline: Medical Advisory - De Cure Center
+    * Content: Include the detailed content for Medical Advisory from the previous prompt.
+* **services/medical-checkup.html:**
+    * Headline: Medical Checkup - De Cure Center
+    * Content: Include the detailed content for Medical Checkup from the previous prompt.
+* **services/medical-tourism.html:**
+    * Headline: Medical Tourism - De Cure Center
+    * Content: Include the detailed content for Medical Tourism from the previous prompt.
+* **services/cosmetology-aesthetics.html:**
+    * Headline: Cosmetology & Aesthetics - De Cure Center
+    * Content: Include the detailed content for Cosmetology & Aesthetics from the previous prompt.
+* **services/plastic-surgery.html:**
+    * Headline: Plastic Surgery - De Cure Center
+    * Content: Include the detailed content for Plastic Surgery from the previous prompt.
+* **services/oncology.html:**
+    * Headline: Oncology - De Cure Center
+    * Content: Include the detailed content for Oncology from the previous prompt.
+* **services/ophthalmology.html:**
+    * Headline: Ophthalmology - De Cure Center
+    * Content: Include the detailed content for Ophthalmology from the previous prompt.
+* **gallery.html:** (As described in the previous prompt).
+* **contact.html:** (As described in the previous prompt).
+
+**Styling (CSS):**
+
+* Update `style.css` to include styles for the dropdown menu in the header. Ensure the styling aligns with the design reference image.
+* Maintain the clean, minimalist, and professional look.
+
+**Functionality (JavaScript):**
+
+* Implement the Google Translate integration.
+* Implement the JavaScript for the "Services" dropdown menu to show and hide the sub-menu items.
+* Implement any other interactive elements suggested by the design reference image.
+
+**SEO & Accessibility:**
+
+* Use semantic HTML5 tags.
+* Provide descriptive `alt` attributes for all images.
+* Ensure the website is navigable using a keyboard, including the dropdown menu.
+* Consider accessibility for translated content.
+
+**Generate the complete HTML, CSS, and JavaScript code for this website, ensuring it follows the new multi-page structure with a "Services" dropdown menu, incorporates all the provided content, and adheres to the visual style of the design reference.**

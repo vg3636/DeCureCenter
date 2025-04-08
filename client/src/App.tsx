@@ -19,11 +19,43 @@ import CosmetologyAesthetics from "./pages/services/cosmetology-aesthetics";
 import PlasticSurgery from "./pages/services/plastic-surgery";
 import Oncology from "./pages/services/oncology";
 import Ophthalmology from "./pages/services/ophthalmology";
+import VisionRehabilitation from "./pages/services/vision-rehabilitation";
+import OcularOncology from "./pages/services/ocular-oncology";
+import ProstheticServices from "./pages/services/prosthetic-services";
+import Opticals from "./pages/services/opticals";
+import LowVisionAids from "./pages/services/low-vision-aids";
+import EyePlasticSurgery from "./pages/services/eye-plastic-surgery";
+import ContactLens from "./pages/services/contact-lens";
+import Hospitality from "./pages/services/hospitality";
+import { useEffect } from "react";
+
+// Add scroll to top behavior
+function ScrollToTop() {
+  useEffect(() => {
+    // Force scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
+    // Add event listener for route changes
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0);
+    };
+    
+    // Listen for popstate events (browser back/forward)
+    window.addEventListener('popstate', handleRouteChange);
+    
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
+  
+  return null;
+}
 
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
+      <ScrollToTop />
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={Home} />
@@ -40,6 +72,14 @@ function Router() {
           <Route path="/services/plastic-surgery" component={PlasticSurgery} />
           <Route path="/services/oncology" component={Oncology} />
           <Route path="/services/ophthalmology" component={Ophthalmology} />
+          <Route path="/services/vision-rehabilitation" component={VisionRehabilitation} />
+          <Route path="/services/ocular-oncology" component={OcularOncology} />
+          <Route path="/services/prosthetic-services" component={ProstheticServices} />
+          <Route path="/services/opticals" component={Opticals} />
+          <Route path="/services/low-vision-aids" component={LowVisionAids} />
+          <Route path="/services/eye-plastic-surgery" component={EyePlasticSurgery} />
+          <Route path="/services/contact-lens" component={ContactLens} />
+          <Route path="/services/hospitality" component={Hospitality} />
           <Route component={NotFound} />
         </Switch>
       </main>

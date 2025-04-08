@@ -1,4 +1,4 @@
-import { Cpu, Languages, BarChart3 } from 'lucide-react';
+import { Stethoscope, Globe, HeartPulse, Brain, Microscope, Users } from 'lucide-react';
 
 interface Technology {
   icon: React.ReactNode;
@@ -8,19 +8,34 @@ interface Technology {
 
 const technologies: Technology[] = [
   {
-    icon: <Cpu className="w-12 h-12" />,
-    title: "Advanced Medical Technology",
-    description: "State-of-the-art equipment and techniques for precise diagnosis and effective treatment."
+    icon: <Microscope className="w-12 h-12" />,
+    title: "Cutting-Edge Diagnostics",
+    description: "State-of-the-art diagnostic equipment for accurate assessment and early detection of medical conditions."
   },
   {
-    icon: <Languages className="w-12 h-12" />,
-    title: "Multilingual Support",
-    description: "Comprehensive care available in multiple languages for international patients."
+    icon: <Brain className="w-12 h-12" />,
+    title: "Advanced Treatment Modalities",
+    description: "Innovative therapeutic approaches combining traditional and modern techniques for optimal patient outcomes."
   },
   {
-    icon: <BarChart3 className="w-12 h-12" />,
-    title: "3D Visualization",
-    description: "Interactive 3D models to help you visualize results before treatment across all our services."
+    icon: <HeartPulse className="w-12 h-12" />,
+    title: "Personalized Care Plans",
+    description: "Tailored treatment strategies designed to address each patient's unique medical needs and health goals."
+  },
+  {
+    icon: <Stethoscope className="w-12 h-12" />,
+    title: "Expert Medical Team",
+    description: "Highly qualified specialists with extensive experience in their respective fields of medicine."
+  },
+  {
+    icon: <Globe className="w-12 h-12" />,
+    title: "International Standards",
+    description: "Medical care adhering to global best practices and protocols ensuring quality and safety."
+  },
+  {
+    icon: <Users className="w-12 h-12" />,
+    title: "Holistic Approach",
+    description: "Comprehensive care addressing physical, emotional, and social aspects of health and wellbeing."
   }
 ];
 
@@ -32,12 +47,12 @@ const TechnologySection = () => {
           Advanced Technology & Expertise
         </h2>
         <p className="text-center text-neutral-800 mb-12">
-          Experience the latest innovations in medical care
+          Experience excellence in healthcare through our comprehensive approach
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-neutral-100 p-8 rounded-lg">
+            <div key={index} className="bg-neutral-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="text-primary-600 text-3xl mb-4 flex justify-center">
                 {tech.icon}
               </div>

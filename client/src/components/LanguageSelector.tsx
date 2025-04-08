@@ -3,109 +3,58 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 
-declare global {
-  interface Window {
-    googleTranslateElementInit: () => void;
-  }
-}
+// Language options for our custom translation dropdown
+const languages = [
+  { code: 'en', name: 'English' },
+  { code: 'hi', name: 'Hindi' },
+  { code: 'fr', name: 'French' },
+  { code: 'es', name: 'Spanish' },
+  { code: 'de', name: 'German' },
+  { code: 'zh-CN', name: 'Chinese' },
+  { code: 'ar', name: 'Arabic' },
+  { code: 'ja', name: 'Japanese' }
+];
 
 const LanguageSelector = () => {
-  const [mounted, setMounted] = useState(false);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [currentLang, setCurrentLang] = useState('en');
 
-  // Function to load the Google Translate script
-  const loadGoogleTranslateScript = () => {
-    if (document.getElementById('google-translate-script')) {
-      setScriptLoaded(true);
-      return;
-    }
-
-    // Create Google Translate element container
-    if (!document.getElementById('google_translate_element')) {
-      const div = document.createElement('div');
-      div.id = 'google_translate_element';
-      div.style.display = 'none';
-      document.body.appendChild(div);
-    }
-
-    // Define the initialization function
-    window.googleTranslateElementInit = () => {
-      new (window as any).google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          autoDisplay: false,
-          layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        'google_translate_element'
-      );
-      setScriptLoaded(true);
-    };
-
-    // Create and load the script
-    const script = document.createElement('script');
-    script.id = 'google-translate-script';
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.async = true;
-    document.body.appendChild(script);
-  };
-
-  useEffect(() => {
-    setMounted(true);
-    loadGoogleTranslateScript();
-  }, []);
-
-  if (!mounted) return null;
-
-  const changeLanguage = (langCode: string) => {
-    if (!scriptLoaded) {
-      loadGoogleTranslateScript();
-      setTimeout(() => changeLanguage(langCode), 1000);
-      return;
-    }
-
-    // Try both potential selectors
-    const selectElement = 
-      document.querySelector('.goog-te-combo') as HTMLSelectElement || 
-      document.querySelector('.VIpgJd-ZVi9od-xl07Ob-lTBxed') as HTMLSelectElement;
+  const handleChangeLanguage = (langCode: string) => {
+    setCurrentLang(langCode);
     
-    if (selectElement) {
-      selectElement.value = langCode;
-      selectElement.dispatchEvent(new Event('change'));
-    } else {
-      console.log('Google Translate element not found');
-      // If selector not found, try using the direct API
-      try {
-        const gtCombo = document.getElementsByClassName('goog-te-combo')[0] as HTMLSelectElement;
-        if (gtCombo) {
-          gtCombo.value = langCode;
-          gtCombo.dispatchEvent(new Event('change'));
-        }
-      } catch (error) {
-        console.error('Error changing language:', error);
-      }
+    if (langCode === 'en') {
+      // If English, reset the page to original content
+      window.location.reload();
+      return;
     }
+    
+    // Create the URL for the translation API
+    const currentUrl = window.location.href;
+    const translateUrl = `https://translate.google.com/translate?sl=auto&tl=${langCode}&u=${encodeURIComponent(currentUrl)}`;
+    
+    // Open in a new tab with translation
+    window.open(translateUrl, '_blank');
   };
 
   return (
     <div className="relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Select language">
+          <Button variant="ghost" size="icon" aria-label="Select language" className="bg-brand-gradient text-white hover:opacity-90">
             <Globe className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => changeLanguage('en')}>English</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('hi')}>Hindi</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('fr')}>French</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('es')}>Spanish</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('de')}>German</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('zh-CN')}>Chinese</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('ar')}>Arabic</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage('ja')}>Japanese</DropdownMenuItem>
+        <DropdownMenuContent align="end" className="border-brand-light">
+          {languages.map((lang) => (
+            <DropdownMenuItem 
+              key={lang.code}
+              onClick={() => handleChangeLanguage(lang.code)}
+              className={currentLang === lang.code ? "bg-brand-primary/10 text-brand-primary font-medium" : ""}
+            >
+              {lang.name}
+            </DropdownMenuItem>
+          ))}
         </DropdownMenuContent>
       </DropdownMenu>
-      <div id="google_translate_element" className="hidden"></div>
     </div>
   );
 };

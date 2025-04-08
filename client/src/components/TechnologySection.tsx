@@ -41,23 +41,30 @@ const technologies: Technology[] = [
 
 const TechnologySection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-primary-600 mb-4">
+        <h2 className="section-title text-center">
           Advanced Technology & Expertise
         </h2>
-        <p className="text-center text-neutral-800 mb-12">
+        <p className="section-subtitle text-center">
           Experience excellence in healthcare through our comprehensive approach
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-neutral-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="text-primary-600 text-3xl mb-4 flex justify-center">
+            <div 
+              key={index} 
+              className="p-8 rounded-lg transition-all duration-300 bg-white border border-gray-100 shadow-sm hover:shadow-md group relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2d4a63] to-[#345977] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              
+              <div className="text-brand-secondary group-hover:text-[#345977] mb-4 flex justify-center transition-colors duration-300">
                 {tech.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-center">{tech.title}</h3>
-              <p className="text-neutral-800 text-center">{tech.description}</p>
+              
+              <h3 className="text-xl font-semibold mb-3 text-center text-brand-primary">{tech.title}</h3>
+              
+              <p className="text-brand-light text-center">{tech.description}</p>
             </div>
           ))}
         </div>

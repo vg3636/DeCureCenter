@@ -40,12 +40,12 @@ const StatisticsSection = () => {
   }, []);
   
   return (
-    <section ref={sectionRef} className="py-16 bg-white border-b border-gray-100">
+    <section ref={sectionRef} className="py-16 statistics-section border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {statistics.map((stat, index) => (
-            <div key={index} className="p-4">
-              <p className="statistic-value">
+            <div key={index} className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <p className="statistic-value bg-gradient-to-r from-[#2d4a63] to-[#345977] bg-clip-text text-transparent">
                 {isVisible ? (
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 ) : (

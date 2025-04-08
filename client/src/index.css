@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --primary: 205 50% 28%;
+    --primary: 210 37% 28%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 205 35% 40%;
@@ -22,6 +22,45 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   
+  /* Color theme variables */
+  :root {
+    --dc-primary: #2d4a63;
+    --dc-secondary: #345977;
+    --dc-light: #6a8bad;
+    --dc-hover: #274966;
+    --dc-gradient-start: #2d4a63;
+    --dc-gradient-end: #345977;
+  }
+  
+  /* Global theme styles */
+  .text-brand-primary {
+    @apply text-[#2d4a63];
+  }
+  
+  .text-brand-secondary {
+    @apply text-[#345977]; 
+  }
+  
+  .text-brand-light {
+    @apply text-[#6a8bad];
+  }
+  
+  .bg-brand-primary {
+    @apply bg-[#2d4a63];
+  }
+  
+  .bg-brand-secondary {
+    @apply bg-[#345977];
+  }
+  
+  .bg-brand-gradient {
+    @apply bg-gradient-to-r from-[#2d4a63] to-[#345977];
+  }
+  
+  .border-brand {
+    @apply border-[#6a8bad];
+  }
+  
   /* Custom styles for statistics section */
   .statistic-value {
     @apply text-4xl md:text-6xl font-bold text-[#345977];
@@ -31,14 +70,27 @@
     @apply text-[#6a8bad] mt-2;
   }
   
+  .statistics-section {
+    @apply bg-gradient-to-b from-white to-gray-50;
+  }
+  
   /* CTA section styling */
   .cta-section {
-    @apply bg-[#2d4a63] text-white;
+    @apply bg-gradient-to-r from-[#2d4a63] to-[#345977] text-white;
   }
   
   /* Primary buttons */
   .btn-primary {
     @apply bg-[#345977] hover:bg-[#274966] text-white;
+  }
+  
+  /* Section headings */
+  .section-title {
+    @apply text-[#2d4a63] text-2xl md:text-3xl font-bold mb-6;
+  }
+  
+  .section-subtitle {
+    @apply text-[#6a8bad] text-lg mb-10 max-w-3xl mx-auto;
   }
   
   /* Hide Google Translate widget parts */

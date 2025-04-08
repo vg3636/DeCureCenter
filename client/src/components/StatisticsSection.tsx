@@ -40,19 +40,19 @@ const StatisticsSection = () => {
   }, []);
   
   return (
-    <section ref={sectionRef} className="py-16 bg-white">
+    <section ref={sectionRef} className="py-16 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {statistics.map((stat, index) => (
             <div key={index} className="p-4">
-              <p className="text-4xl font-bold text-primary-600 mb-2">
+              <p className="statistic-value">
                 {isVisible ? (
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 ) : (
                   `0${stat.suffix}`
                 )}
               </p>
-              <p className="text-neutral-800">{stat.label}</p>
+              <p className="statistic-label">{stat.label}</p>
             </div>
           ))}
         </div>

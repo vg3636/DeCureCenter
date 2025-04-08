@@ -3,11 +3,67 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: 205 50% 28%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 205 35% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 205 60% 20%;
+    --accent-foreground: 0 0% 100%;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Custom styles for statistics section */
+  .statistic-value {
+    @apply text-4xl md:text-6xl font-bold text-[#345977];
+  }
+  
+  .statistic-label {
+    @apply text-[#6a8bad] mt-2;
+  }
+  
+  /* CTA section styling */
+  .cta-section {
+    @apply bg-[#2d4a63] text-white;
+  }
+  
+  /* Primary buttons */
+  .btn-primary {
+    @apply bg-[#345977] hover:bg-[#274966] text-white;
+  }
+  
+  /* Hide Google Translate widget parts */
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  
+  body {
+    top: 0 !important;
+  }
+  
+  .VIpgJd-ZVi9od-ORHb-OEVmcd {
+    display: none !important;
+  }
+  
+  .goog-logo-link, 
+  .goog-te-gadget span {
+    display: none !important;
+  }
+  
+  .goog-te-gadget {
+    color: transparent !important;
+  }
+  
+  .goog-te-menu-value {
+    color: inherit !important;
   }
 }

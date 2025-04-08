@@ -3,17 +3,18 @@ import { Button } from '@/components/ui/button';
 
 const CTASection = () => {
   return (
-    <section id="consultation" className="py-16 bg-primary-600 text-white">
+    <section id="consultation" className="py-16 cta-section">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Ready to Take the First Step?
         </h2>
-        <p className="mb-8 max-w-2xl mx-auto">
-          Schedule your consultation today to discover how our comprehensive medical services can provide the care you need.
+        <p className="mb-8 max-w-2xl mx-auto opacity-85">
+          Schedule your consultation today and let us help you restore your confidence with a custom
+          prosthetic eye solution.
         </p>
         <Link href="/contact">
-          <Button className="bg-white text-primary-600 hover:bg-neutral-100 font-medium py-3 px-8">
-            Book Your Appointment
+          <Button className="bg-white text-[#2d4a63] hover:bg-gray-100 font-medium py-3 px-8 rounded">
+            Book Your Consultation
           </Button>
         </Link>
       </div>

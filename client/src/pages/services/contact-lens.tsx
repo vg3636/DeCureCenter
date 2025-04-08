@@ -3,8 +3,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Eye, Activity, ShieldCheck, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
+import { useTranslation } from '../../components/LanguageSelector';
 
 const ContactLens = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Helmet>
@@ -12,22 +15,22 @@ const ContactLens = () => {
         <meta name="description" content="De Cure Center provides comprehensive contact lens services, including professional fittings for various types of contact lenses, such as soft, rigid gas permeable, and specialty lenses." />
       </Helmet>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-[#f8fafc] to-[#e6f7ff]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">Contact Lens</h1>
-            <p className="text-lg text-neutral-700">
+            <h1 className="text-3xl md:text-4xl font-semibold text-[#1e3a52] mb-4">Contact Lens</h1>
+            <p className="text-lg text-gray-700">
               Professional fitting and specialized contact lenses
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="md:w-1/2">
-              <h2 className="text-2xl font-semibold text-primary-600 mb-4">Expert Contact Lens Services</h2>
-              <p className="text-neutral-800 mb-4">
+              <h2 className="text-2xl font-semibold text-[#2d4a63] mb-4">Expert Contact Lens Services</h2>
+              <p className="text-gray-700 mb-4">
                 At De Cure Center, we provide comprehensive contact lens services designed to meet the diverse needs of our patients. Our experienced optometrists and contact lens specialists offer professional fittings for a wide range of contact lenses, from standard soft lenses to specialized options for complex eye conditions.
               </p>
-              <p className="text-neutral-800">
+              <p className="text-gray-700">
                 We understand that proper contact lens fit is essential for comfort, clear vision, and long-term eye health. Our team takes a thorough, personalized approach to contact lens fitting, ensuring that you receive the most appropriate lenses for your prescription, lifestyle, and eye health needs.
               </p>
             </div>
@@ -35,71 +38,71 @@ const ContactLens = () => {
               <img
                 src="https://images.unsplash.com/photo-1609840532227-1fe3c8c1b6fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Contact lens specialist fitting contact lenses for a patient"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-md border border-[#d0e8f2] w-full h-auto transition-all duration-300 hover:shadow-lg"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="bg-primary-50 border-primary-100">
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
-                  <Eye className="h-10 w-10 text-primary-600" />
+                  <Eye className="h-10 w-10 text-[#2d4a63]" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Comprehensive Eye Exam</h3>
-                <p className="text-neutral-700">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Comprehensive Eye Exam</h3>
+                <p className="text-gray-700">
                   Before prescribing contact lenses, we conduct a thorough eye examination to assess your vision needs and eye health, ensuring that contacts are appropriate for your specific situation.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary-50 border-primary-100">
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
-                  <Activity className="h-10 w-10 text-primary-600" />
+                  <Activity className="h-10 w-10 text-[#2d4a63]" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Expert Fitting</h3>
-                <p className="text-neutral-700">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Expert Fitting</h3>
+                <p className="text-gray-700">
                   Our specialists take precise measurements of your eyes and evaluate important factors such as tear production to determine the optimal lens size, curvature, and material for your eyes.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary-50 border-primary-100">
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
-                  <ShieldCheck className="h-10 w-10 text-primary-600" />
+                  <ShieldCheck className="h-10 w-10 text-[#2d4a63]" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Personalized Education</h3>
-                <p className="text-neutral-700">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Personalized Education</h3>
+                <p className="text-gray-700">
                   We provide comprehensive training on proper insertion, removal, cleaning, and maintenance of your contact lenses to ensure safe wear and optimal eye health.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary-50 border-primary-100">
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
-                  <CheckCircle className="h-10 w-10 text-primary-600" />
+                  <CheckCircle className="h-10 w-10 text-[#2d4a63]" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Ongoing Support</h3>
-                <p className="text-neutral-700">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Ongoing Support</h3>
+                <p className="text-gray-700">
                   Our care continues with regular follow-up appointments to assess how your contacts are performing, make adjustments as needed, and ensure your eyes remain healthy with contact lens wear.
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Our Contact Lens Options</h2>
+          <div className="bg-[#e6f7ff] rounded-lg p-8 mb-16">
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Our Contact Lens Options</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Soft Contact Lenses</h3>
-                  <p className="text-neutral-700 mb-3">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Soft Contact Lenses</h3>
+                  <p className="text-gray-700 mb-3">
                     Comfortable, flexible lenses suitable for most prescriptions and eye types.
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Daily disposable lenses</li>
                     <li>Two-week replacement lenses</li>
                     <li>Monthly replacement lenses</li>
@@ -111,13 +114,13 @@ const ContactLens = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Rigid Gas Permeable (RGP) Lenses</h3>
-                  <p className="text-neutral-700 mb-3">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Rigid Gas Permeable (RGP) Lenses</h3>
+                  <p className="text-gray-700 mb-3">
                     Durable lenses that provide exceptional visual clarity and are suitable for certain eye conditions.
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Standard RGP lenses</li>
                     <li>Toric RGP lenses</li>
                     <li>Bifocal and multifocal RGP lenses</li>
@@ -128,13 +131,13 @@ const ContactLens = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Specialty Contact Lenses</h3>
-                  <p className="text-neutral-700 mb-3">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Specialty Contact Lenses</h3>
+                  <p className="text-gray-700 mb-3">
                     Advanced lens options for complex eye conditions and specific visual needs.
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Scleral lenses for irregular corneas</li>
                     <li>Hybrid lenses (RGP center with soft skirt)</li>
                     <li>Prosthetic lenses for cosmetic correction</li>
@@ -149,15 +152,15 @@ const ContactLens = () => {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Specialized Contact Lens Solutions</h2>
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Specialized Contact Lens Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Contact Lenses for Complex Conditions</h3>
-                  <p className="text-neutral-700 mb-4">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Contact Lenses for Complex Conditions</h3>
+                  <p className="text-gray-700 mb-4">
                     Our specialists have extensive experience fitting contact lenses for patients with challenging eye conditions, including:
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-2">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>
                       <span className="font-medium">Keratoconus:</span> We offer specialized rigid gas permeable lenses, hybrids, and scleral lenses that vault over the irregular cornea to provide clear, comfortable vision.
                     </li>
@@ -174,13 +177,13 @@ const ContactLens = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Specialty Lens Applications</h3>
-                  <p className="text-neutral-700 mb-4">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Specialty Lens Applications</h3>
+                  <p className="text-gray-700 mb-4">
                     Beyond vision correction, we offer contact lenses for various specialized purposes:
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-2">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>
                       <span className="font-medium">Orthokeratology:</span> Specially designed RGP lenses worn overnight to temporarily reshape the cornea, allowing for clear vision during the day without lenses—often used for myopia control in children.
                     </li>
@@ -200,12 +203,12 @@ const ContactLens = () => {
           </div>
 
           <div className="text-center">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6">Experience Clear, Comfortable Vision with Contact Lenses</h2>
-            <p className="text-neutral-700 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6">Experience Clear, Comfortable Vision with Contact Lenses</h2>
+            <p className="text-gray-700 mb-8 max-w-3xl mx-auto">
               Whether you're new to contact lenses or looking for a more comfortable or effective option, our team at De Cure Center is here to help. Contact us today to schedule a comprehensive eye examination and contact lens consultation to discover the right contact lens solution for your unique visual needs.
             </p>
             <Link href="/contact">
-              <Button className="bg-primary-600 hover:bg-primary-700 text-white">
+              <Button className="bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] hover:opacity-95 text-white shadow-sm">
                 Schedule a Contact Lens Consultation
               </Button>
             </Link>

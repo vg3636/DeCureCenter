@@ -3,8 +3,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Scissors, Activity, Shield, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
+import { useTranslation } from '../../components/LanguageSelector';
 
 const EyePlasticSurgery = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Helmet>
@@ -12,22 +15,22 @@ const EyePlasticSurgery = () => {
         <meta name="description" content="The eye plastic surgery department at De Cure Center specializes in cosmetic and reconstructive procedures around the eyes, including eyelid surgery, tear duct surgery, and orbital surgery." />
       </Helmet>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-[#f8fafc] to-[#e6f7ff]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">Eye Plastic Surgery</h1>
-            <p className="text-lg text-neutral-700">
+            <h1 className="text-3xl md:text-4xl font-semibold text-[#1e3a52] mb-4">Eye Plastic Surgery</h1>
+            <p className="text-lg text-gray-700">
               Cosmetic and reconstructive procedures for the eye area
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="md:w-1/2">
-              <h2 className="text-2xl font-semibold text-primary-600 mb-4">Specialized Oculoplastic Expertise</h2>
-              <p className="text-neutral-800 mb-4">
+              <h2 className="text-2xl font-semibold text-[#2d4a63] mb-4">Specialized Oculoplastic Expertise</h2>
+              <p className="text-gray-700 mb-4">
                 At De Cure Center, our eye plastic surgery department specializes in cosmetic and reconstructive procedures around the eyes and surrounding structures. Our skilled oculoplastic surgeons combine advanced surgical techniques with artistic precision to improve both the function and appearance of the eyes.
               </p>
-              <p className="text-neutral-800">
+              <p className="text-gray-700">
                 Whether you're seeking treatment for a medical condition affecting the eyelids, tear ducts, or orbit, or you're interested in cosmetic enhancements to the eye area, our specialists provide personalized care with a focus on natural-looking results and improved ocular health and function.
               </p>
             </div>
@@ -35,22 +38,22 @@ const EyePlasticSurgery = () => {
               <img
                 src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Oculoplastic surgeon examining a patient"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-md border border-[#d0e8f2] w-full h-auto transition-all duration-300 hover:shadow-lg"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <Card>
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-start mb-4">
-                  <Scissors className="h-8 w-8 text-primary-600 mr-4 mt-1" />
+                  <Scissors className="h-8 w-8 text-[#2d4a63] mr-4 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Eyelid Procedures</h3>
-                    <p className="text-neutral-700 mb-3">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Eyelid Procedures</h3>
+                    <p className="text-gray-700 mb-3">
                       Surgical interventions to address functional issues and aesthetic concerns related to the eyelids.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Blepharoplasty (eyelid lift) for drooping upper lids or puffy lower lids</li>
                       <li>Ptosis repair for eyelids that obstruct vision</li>
                       <li>Entropion correction (inward-turning eyelids)</li>
@@ -63,16 +66,16 @@ const EyePlasticSurgery = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-start mb-4">
-                  <Activity className="h-8 w-8 text-primary-600 mr-4 mt-1" />
+                  <Activity className="h-8 w-8 text-[#2d4a63] mr-4 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Tear Duct Surgery</h3>
-                    <p className="text-neutral-700 mb-3">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Tear Duct Surgery</h3>
+                    <p className="text-gray-700 mb-3">
                       Procedures to address obstructions and abnormalities in the tear drainage system.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Dacryocystorhinostomy (DCR) to create a new tear drainage pathway</li>
                       <li>Punctoplasty to open narrowed tear duct openings</li>
                       <li>Canalicular repair for damaged tear ducts</li>
@@ -86,19 +89,19 @@ const EyePlasticSurgery = () => {
             </Card>
           </div>
 
-          <div className="bg-primary-50 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Specialized Oculoplastic Services</h2>
+          <div className="bg-[#e6f7ff] rounded-lg p-8 mb-16">
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Specialized Oculoplastic Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start">
-                    <Shield className="h-8 w-8 text-primary-600 mr-4 mt-1" />
+                    <Shield className="h-8 w-8 text-[#2d4a63] mr-4 mt-1" />
                     <div>
-                      <h3 className="text-xl font-semibold text-primary-600 mb-3">Orbital Surgery</h3>
-                      <p className="text-neutral-700 mb-3">
+                      <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Orbital Surgery</h3>
+                      <p className="text-gray-700 mb-3">
                         Specialized procedures addressing conditions affecting the eye socket and surrounding structures.
                       </p>
-                      <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                      <ul className="list-disc pl-5 text-gray-700 space-y-1">
                         <li>Orbital decompression for thyroid eye disease</li>
                         <li>Orbital tumor removal</li>
                         <li>Socket reconstruction</li>
@@ -111,16 +114,16 @@ const EyePlasticSurgery = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start">
-                    <Layers className="h-8 w-8 text-primary-600 mr-4 mt-1" />
+                    <Layers className="h-8 w-8 text-[#2d4a63] mr-4 mt-1" />
                     <div>
-                      <h3 className="text-xl font-semibold text-primary-600 mb-3">Facial Aesthetic Procedures</h3>
-                      <p className="text-neutral-700 mb-3">
+                      <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Facial Aesthetic Procedures</h3>
+                      <p className="text-gray-700 mb-3">
                         Minimally invasive and surgical techniques to rejuvenate the eye area and surrounding facial structures.
                       </p>
-                      <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                      <ul className="list-disc pl-5 text-gray-700 space-y-1">
                         <li>Botulinum toxin (Botox) injections for wrinkles and crow's feet</li>
                         <li>Dermal fillers for tear troughs and facial volume restoration</li>
                         <li>Laser skin resurfacing around the eyes</li>

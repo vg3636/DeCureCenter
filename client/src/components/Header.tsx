@@ -68,8 +68,8 @@ const Header = () => {
                       to={`/services/${service.slug}`} 
                       className={`w-full block px-3 py-2.5 transition-colors duration-200 rounded ${
                         isActive(`/services/${service.slug}`) 
-                          ? 'bg-[#e6f7ff] text-[#1e3a52] font-medium' 
-                          : 'text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52]'
+                          ? 'bg-[#2d4a63] text-white font-medium' 
+                          : 'text-gray-700 hover:bg-[#2d4a63] hover:text-white'
                       }`}
                     >
                       {t(service.name)}
@@ -138,9 +138,9 @@ const Header = () => {
                     onClick={closeMenu}
                     className={`block py-2 px-3 rounded ${
                       isActive(`/services/${service.slug}`) 
-                        ? 'bg-[#e6f7ff] text-[#2d4a63] font-medium' 
+                        ? 'bg-[#2d4a63] text-white font-medium' 
                         : 'text-gray-700'
-                    } cursor-pointer hover:bg-[#e6f7ff] hover:text-[#2d4a63] transition-colors duration-200`}
+                    } cursor-pointer hover:bg-[#2d4a63] hover:text-white transition-colors duration-200`}
                   >
                     {t(service.name)}
                   </Link>

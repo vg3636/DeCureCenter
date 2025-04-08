@@ -8,7 +8,7 @@ const FeaturesSection = () => {
           Why Choose De Cure Center
         </h2>
         <p className="text-center text-neutral-800 mb-12 max-w-2xl mx-auto">
-          Experience excellence in ocular prosthetics with our expert team and advanced technology.
+          Experience excellence in medical care with our expert team and advanced technology.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -19,7 +19,7 @@ const FeaturesSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Natural Appearance</h3>
             <p className="text-neutral-800 text-center">
-              Our prosthetic eyes are manufactured to reflect your own eye's perfect match.
+              Our specialists ensure treatments that maintain your natural look and restore functionality.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Comfortable Fit</h3>
             <p className="text-neutral-800 text-center">
-              Custom fitted prosthetics ensure maximum comfort and natural movement.
+              Custom-tailored care ensures maximum comfort and satisfaction across all our services.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Expert Care</h3>
             <p className="text-neutral-800 text-center">
-              Backed by 12+ years of specialized experience in ocular prosthetics.
+              Backed by 12+ years of specialized experience in comprehensive medical services.
             </p>
           </div>
         </div>

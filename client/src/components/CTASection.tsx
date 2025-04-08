@@ -9,11 +9,11 @@ const CTASection = () => {
           Ready to Take the First Step?
         </h2>
         <p className="mb-8 max-w-2xl mx-auto">
-          Schedule your consultation today to see how our advanced ocular prosthetics can transform your life.
+          Schedule your consultation today to discover how our comprehensive medical services can provide the care you need.
         </p>
         <Link href="/contact">
           <Button className="bg-white text-primary-600 hover:bg-neutral-100 font-medium py-3 px-8">
-            Book Your Consultation
+            Book Your Appointment
           </Button>
         </Link>
       </div>

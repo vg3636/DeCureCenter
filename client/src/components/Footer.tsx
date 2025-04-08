@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">De Cure Center</h3>
             <p className="text-neutral-400">
-              Leading specialists in ocular prosthetics with over 12 years of experience bringing confidence back to our patients.
+              Leading specialists in comprehensive medical care with over 12 years of experience bringing health and confidence back to our patients.
             </p>
           </div>
 
@@ -19,11 +19,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {SERVICES.slice(0, 4).map((service) => (
                 <li key={service.slug}>
-                  <Link href={`/services/${service.slug}`}>
-                    <a className="text-neutral-400 hover:text-white transition duration-200">
-                      {service.name}
-                    </a>
-                  </Link>
+                  <span 
+                    onClick={() => window.location.href = `/services/${service.slug}`} 
+                    className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer"
+                  >
+                    {service.name}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -61,15 +62,15 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-neutral-400 mb-4 md:mb-0">&copy; {new Date().getFullYear()} De Cure Center. All rights reserved.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-neutral-400 hover:text-white transition duration-200" aria-label="Facebook">
+              <span className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer" aria-label="Facebook">
                 <Facebook className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition duration-200" aria-label="Instagram">
+              </span>
+              <span className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer" aria-label="Instagram">
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition duration-200" aria-label="Twitter">
+              </span>
+              <span className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer" aria-label="Twitter">
                 <Twitter className="w-6 h-6" />
-              </a>
+              </span>
             </div>
           </div>
         </div>

@@ -38,14 +38,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <a className="text-primary-600 font-semibold text-xl">De Cure Center</a>
+            <span className="text-primary-600 font-semibold text-xl cursor-pointer">De Cure Center</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/about">
-            <a className={navLinkClass('/about')}>About</a>
+            <span className={`${navLinkClass('/about')} cursor-pointer`}>About</span>
           </Link>
 
           <DropdownMenu>
@@ -58,21 +58,21 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-64">
               {SERVICES.map((service) => (
-                <DropdownMenuItem key={service.slug} asChild>
-                  <Link href={`/services/${service.slug}`}>
-                    <a className="w-full block px-2">{service.name}</a>
-                  </Link>
+                <DropdownMenuItem key={service.slug} onClick={() => {
+                  window.location.href = `/services/${service.slug}`;
+                }}>
+                  <span className="w-full block px-2">{service.name}</span>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
           <Link href="/faq">
-            <a className={navLinkClass('/faq')}>FAQ</a>
+            <span className={`${navLinkClass('/faq')} cursor-pointer`}>FAQ</span>
           </Link>
 
           <Link href="/contact">
-            <a className={navLinkClass('/contact')}>Contact</a>
+            <span className={`${navLinkClass('/contact')} cursor-pointer`}>Contact</span>
           </Link>
 
           <LanguageSelector />
@@ -103,46 +103,48 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-lg absolute w-full z-50">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link href="/about">
-              <a
-                className={`block ${navLinkClass('/about')}`}
+              <span
+                className={`block ${navLinkClass('/about')} cursor-pointer`}
                 onClick={closeMenu}
               >
                 About
-              </a>
+              </span>
             </Link>
 
             <div className="py-2">
               <div className="font-medium mb-2">Services</div>
               <div className="pl-4 flex flex-col space-y-2">
                 {SERVICES.map((service) => (
-                  <Link key={service.slug} href={`/services/${service.slug}`}>
-                    <a
-                      className={`block ${navLinkClass(`/services/${service.slug}`)}`}
-                      onClick={closeMenu}
-                    >
-                      {service.name}
-                    </a>
-                  </Link>
+                  <span
+                    key={service.slug}
+                    className={`block ${navLinkClass(`/services/${service.slug}`)} cursor-pointer`}
+                    onClick={() => {
+                      window.location.href = `/services/${service.slug}`;
+                      closeMenu();
+                    }}
+                  >
+                    {service.name}
+                  </span>
                 ))}
               </div>
             </div>
 
             <Link href="/faq">
-              <a
-                className={`block ${navLinkClass('/faq')}`}
+              <span
+                className={`block ${navLinkClass('/faq')} cursor-pointer`}
                 onClick={closeMenu}
               >
                 FAQ
-              </a>
+              </span>
             </Link>
 
             <Link href="/contact">
-              <a
-                className={`block ${navLinkClass('/contact')}`}
+              <span
+                className={`block ${navLinkClass('/contact')} cursor-pointer`}
                 onClick={closeMenu}
               >
                 Contact
-              </a>
+              </span>
             </Link>
 
             <Link href="/contact">

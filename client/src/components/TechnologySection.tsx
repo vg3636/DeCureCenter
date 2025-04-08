@@ -9,8 +9,8 @@ interface Technology {
 const technologies: Technology[] = [
   {
     icon: <Cpu className="w-12 h-12" />,
-    title: "Digital Eye Scanning",
-    description: "Advanced 3D scanning technology for precise measurements and perfect matching."
+    title: "Advanced Medical Technology",
+    description: "State-of-the-art equipment and techniques for precise diagnosis and effective treatment."
   },
   {
     icon: <Languages className="w-12 h-12" />,
@@ -20,7 +20,7 @@ const technologies: Technology[] = [
   {
     icon: <BarChart3 className="w-12 h-12" />,
     title: "3D Visualization",
-    description: "Interactive 3D models to help you visualize the result before treatment."
+    description: "Interactive 3D models to help you visualize results before treatment across all our services."
   }
 ];
 
@@ -32,7 +32,7 @@ const TechnologySection = () => {
           Advanced Technology & Expertise
         </h2>
         <p className="text-center text-neutral-800 mb-12">
-          Experience the latest innovations in ocular prosthetics
+          Experience the latest innovations in medical care
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

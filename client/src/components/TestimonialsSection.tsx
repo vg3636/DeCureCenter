@@ -8,7 +8,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    content: "Dr. Michael and his team gave me back my confidence. The prosthetic eye looks so natural that people don't notice any difference. It's made such a positive impact on my life.",
+    content: "Dr. Michael and his team gave me back my confidence. Their expert care and attention to detail made a real difference.",
     author: "Roger K.",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    content: "As a parent, I was worried about my child's confidence after his accident. The expert experience at De Cure Center made all the difference.",
+    content: "As a patient, I was worried about my recovery after surgery. The expert experience at De Cure Center made all the difference.",
     author: "Sam T.",
     image: "https://randomuser.me/api/portraits/men/75.jpg"
   }

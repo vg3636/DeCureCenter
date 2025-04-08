@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
@@ -43,16 +43,29 @@ function ScrollToTop() {
     // Force scroll to top when component mounts
     window.scrollTo(0, 0);
     
-    // Add event listener for route changes
-    const handleRouteChange = () => {
-      window.scrollTo(0, 0);
+    // Add event listener for navigation clicks
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' || 
+          target.closest('a') || 
+          target.closest('button[data-nav]') ||
+          target.closest('[role="link"]') ||
+          target.closest('[data-nav-item]')) {
+        // This is a navigation element, scroll to top
+        setTimeout(() => window.scrollTo(0, 0), 100);
+      }
     };
     
+    // Listen for click events on navigation elements
+    document.addEventListener('click', handleClick);
+    
     // Listen for popstate events (browser back/forward)
-    window.addEventListener('popstate', handleRouteChange);
+    const handlePopState = () => window.scrollTo(0, 0);
+    window.addEventListener('popstate', handlePopState);
     
     return () => {
-      window.removeEventListener('popstate', handleRouteChange);
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('popstate', handlePopState);
     };
   }, []);
   

@@ -1,8 +1,10 @@
 import { Link } from 'wouter';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import { SERVICES } from '../lib/constants';
+import { useTranslation } from './LanguageSelector';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-neutral-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -10,12 +12,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">De Cure Center</h3>
             <p className="text-neutral-400">
-              Leading specialists in comprehensive medical care with over 12 years of experience bringing health and confidence back to our patients.
+              {t('Leading specialists in comprehensive medical care with over 12 years of experience bringing health and confidence back to our patients.')}
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Services</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('Services')}</h3>
             <ul className="space-y-2">
               {SERVICES.slice(0, 4).map((service) => (
                 <li key={service.slug}>
@@ -23,7 +25,7 @@ const Footer = () => {
                     onClick={() => window.location.href = `/services/${service.slug}`} 
                     className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer"
                   >
-                    {service.name}
+                    {t(service.name)}
                   </span>
                 </li>
               ))}
@@ -31,7 +33,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('Contact')}</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-neutral-400" />
@@ -49,18 +51,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Working Hours</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('Working Hours')}</h3>
             <ul className="space-y-2">
-              <li className="text-neutral-400">Monday - Friday: 9am - 6pm</li>
-              <li className="text-neutral-400">Saturday: 9am - 4pm</li>
-              <li className="text-neutral-400">Sunday: Closed</li>
+              <li className="text-neutral-400">{t('Monday - Friday')}: 9am - 6pm</li>
+              <li className="text-neutral-400">{t('Saturday')}: 9am - 4pm</li>
+              <li className="text-neutral-400">{t('Sunday')}: {t('Closed')}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-neutral-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-neutral-400 mb-4 md:mb-0">&copy; {new Date().getFullYear()} De Cure Center. All rights reserved.</p>
+            <p className="text-neutral-400 mb-4 md:mb-0">&copy; {new Date().getFullYear()} De Cure Center. {t('All rights reserved.')}</p>
             <div className="flex space-x-4">
               <span className="text-neutral-400 hover:text-white transition duration-200 cursor-pointer" aria-label="Facebook">
                 <Facebook className="w-6 h-6" />

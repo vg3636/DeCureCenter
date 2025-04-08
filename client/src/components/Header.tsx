@@ -46,12 +46,13 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/about">
-            <span className={`${navLinkClass('/about')} cursor-pointer`}>{t('About')}</span>
+            <span data-nav-item className={`${navLinkClass('/about')} cursor-pointer`}>{t('About')}</span>
           </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button
+                data-nav
                 className={`flex items-center ${navLinkClass('/services')}`}
               >
                 {t('Services')} <ChevronDown className="ml-1 h-4 w-4" />
@@ -62,18 +63,18 @@ const Header = () => {
                 <DropdownMenuItem key={service.slug} onClick={() => {
                   window.location.href = `/services/${service.slug}`;
                 }}>
-                  <span className="w-full block px-2 text-gray-700 hover:text-brand-primary">{service.name}</span>
+                  <span className="w-full block px-2 text-gray-800 font-medium hover:bg-brand-primary/10 hover:text-brand-primary rounded py-1">{service.name}</span>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
           <Link href="/faq">
-            <span className={`${navLinkClass('/faq')} cursor-pointer`}>{t('FAQ')}</span>
+            <span data-nav-item className={`${navLinkClass('/faq')} cursor-pointer`}>{t('FAQ')}</span>
           </Link>
 
           <Link href="/contact">
-            <span className={`${navLinkClass('/contact')} cursor-pointer`}>{t('Contact')}</span>
+            <span data-nav-item className={`${navLinkClass('/contact')} cursor-pointer`}>{t('Contact')}</span>
           </Link>
         </nav>
 
@@ -108,6 +109,7 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link href="/about">
               <span
+                data-nav-item
                 className={`block ${navLinkClass('/about')} cursor-pointer`}
                 onClick={closeMenu}
               >
@@ -121,7 +123,8 @@ const Header = () => {
                 {SERVICES.map((service) => (
                   <span
                     key={service.slug}
-                    className={`block ${navLinkClass(`/services/${service.slug}`)} cursor-pointer`}
+                    data-nav-item
+                    className={`block py-1 px-2 rounded ${navLinkClass(`/services/${service.slug}`)} cursor-pointer text-gray-800 font-medium hover:bg-brand-primary/10 hover:text-brand-primary`}
                     onClick={() => {
                       window.location.href = `/services/${service.slug}`;
                       closeMenu();
@@ -135,6 +138,7 @@ const Header = () => {
 
             <Link href="/faq">
               <span
+                data-nav-item
                 className={`block ${navLinkClass('/faq')} cursor-pointer`}
                 onClick={closeMenu}
               >
@@ -144,6 +148,7 @@ const Header = () => {
 
             <Link href="/contact">
               <span
+                data-nav-item
                 className={`block ${navLinkClass('/contact')} cursor-pointer`}
                 onClick={closeMenu}
               >

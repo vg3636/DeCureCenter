@@ -3,8 +3,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SERVICES } from '../lib/constants';
 import { ChevronRight } from 'lucide-react';
+import { useTranslation } from './LanguageSelector';
 
 const FeaturedServicesSection = () => {
+  const { t } = useTranslation();
+  
   // Handle image error by replacing with a placeholder
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
@@ -16,10 +19,9 @@ const FeaturedServicesSection = () => {
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="section-title text-center">Our Services</h2>
+          <h2 className="section-title text-center">{t('Our Services')}</h2>
           <p className="section-subtitle text-center">
-            De Cure Center offers a comprehensive range of medical services
-            to meet all your healthcare needs
+            {t('Explore our medical services')}
           </p>
         </div>
         
@@ -41,12 +43,12 @@ const FeaturedServicesSection = () => {
               <CardContent className="p-5">
                 <h3 className="service-card-title text-xl font-semibold text-brand-primary mb-3">{service.name}</h3>
                 <p className="text-brand-light mb-4 line-clamp-3">{service.excerpt}</p>
-                <Link href={`/services/${service.slug}`}>
+                <Link href={`/services/${service.slug}`} data-nav-item>
                   <Button 
                     variant="outline" 
                     className="service-button w-full group border-brand-light transition-all duration-300"
                   >
-                    Learn More
+                    {t('Learn More')}
                     <ChevronRight className="service-icon ml-2 h-4 w-4 group-hover:translate-x-1 transition-all duration-300" />
                   </Button>
                 </Link>

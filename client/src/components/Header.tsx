@@ -28,12 +28,8 @@ const Header = () => {
     return location === path || (path !== '/' && location.startsWith(path));
   };
 
-  const navLinkClass = (path: string) => {
-    return `relative px-3 py-2 text-gray-700 transition-all duration-200 rounded ${
-      isActive(path) 
-        ? 'font-semibold bg-[#e6f7ff] text-[#1e3a52]' 
-        : 'hover:bg-[#e6f7ff] hover:text-[#2d4a63]'
-    }`;
+  const navLinkClass = () => {
+    return `relative px-3 py-2 text-gray-700 transition-all duration-200 rounded hover:bg-[#e6f7ff] hover:text-[#2d4a63]`;
   };
 
   return (
@@ -48,14 +44,14 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/about">
-            <span data-nav-item className={`${navLinkClass('/about')} cursor-pointer`}>{t('About')}</span>
+            <span data-nav-item className={`${navLinkClass()} cursor-pointer`}>{t('About')}</span>
           </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button
                 data-nav
-                className={`flex items-center ${navLinkClass('/services')}`}
+                className={`flex items-center ${navLinkClass()}`}
               >
                 {t('Services')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -66,11 +62,7 @@ const Header = () => {
                   <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
                     <Link 
                       to={`/services/${service.slug}`} 
-                      className={`w-full block px-3 py-2.5 transition-all duration-200 rounded ${
-                        isActive(`/services/${service.slug}`) 
-                          ? 'bg-[#2d4a63] text-white font-medium' 
-                          : 'text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1'
-                      }`}
+                      className="w-full block px-3 py-2.5 text-gray-700 transition-all duration-200 rounded hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1"
                     >
                       {t(service.name)}
                     </Link>
@@ -81,11 +73,11 @@ const Header = () => {
           </DropdownMenu>
 
           <Link href="/faq">
-            <span data-nav-item className={`${navLinkClass('/faq')} cursor-pointer`}>{t('FAQ')}</span>
+            <span data-nav-item className={`${navLinkClass()} cursor-pointer`}>{t('FAQ')}</span>
           </Link>
 
           <Link href="/contact">
-            <span data-nav-item className={`${navLinkClass('/contact')} cursor-pointer`}>{t('Contact')}</span>
+            <span data-nav-item className={`${navLinkClass()} cursor-pointer`}>{t('Contact')}</span>
           </Link>
         </nav>
 
@@ -121,7 +113,7 @@ const Header = () => {
             <Link href="/about">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/about')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass()} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('About')}
@@ -136,11 +128,7 @@ const Header = () => {
                     key={service.slug}
                     to={`/services/${service.slug}`}
                     onClick={closeMenu}
-                    className={`block py-2 px-3 rounded ${
-                      isActive(`/services/${service.slug}`) 
-                        ? 'bg-[#2d4a63] text-white font-medium' 
-                        : 'text-gray-700'
-                    } cursor-pointer hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1 transition-all duration-200`}
+                    className="block py-2 px-3 rounded text-gray-700 cursor-pointer hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1 transition-all duration-200"
                   >
                     {t(service.name)}
                   </Link>
@@ -151,7 +139,7 @@ const Header = () => {
             <Link href="/faq">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/faq')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass()} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('FAQ')}
@@ -161,7 +149,7 @@ const Header = () => {
             <Link href="/contact">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/contact')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass()} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('Contact')}

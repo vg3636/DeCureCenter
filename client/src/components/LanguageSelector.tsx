@@ -39,7 +39,7 @@ const LanguageSelector = () => {
     <div className="relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Select language" className="bg-brand-gradient text-white hover:opacity-90">
+          <Button variant="ghost" size="icon" aria-label="Select language" className="text-brand-light hover:text-brand-primary">
             <Globe className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>

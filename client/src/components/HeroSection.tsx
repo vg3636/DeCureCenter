@@ -15,15 +15,10 @@ const HeroSection = () => {
             <p className="text-brand-light text-lg mb-8">
               Specialized medical services by India's leading healthcare professionals
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div>
               <Link href="/contact">
                 <Button className="bg-brand-gradient hover:opacity-90 text-white py-3 px-6 rounded">
                   Schedule Your Consultation
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="outline" className="border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white py-3 px-6">
-                  Explore Our Services
                 </Button>
               </Link>
             </div>

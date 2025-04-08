@@ -60,6 +60,10 @@
   .border-brand {
     @apply border-[#6a8bad];
   }
+
+  .border-brand-light {
+    @apply border-[#6a8bad]/30;
+  }
   
   /* Custom styles for statistics section */
   .statistic-value {
@@ -91,6 +95,51 @@
   
   .section-subtitle {
     @apply text-[#6a8bad] text-lg mb-10 max-w-3xl mx-auto;
+  }
+  
+  /* Service Card Animation */
+  .service-card {
+    @apply relative overflow-hidden transition-all duration-300 transform hover:-translate-y-2;
+  }
+  
+  .service-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2d4a63] to-[#345977] transform scale-x-0 transition-transform duration-300 origin-left;
+  }
+  
+  .service-card:hover::before {
+    @apply scale-x-100;
+  }
+  
+  .service-card .service-image {
+    @apply transition-all duration-500 transform hover:scale-110;
+  }
+  
+  .service-card:hover .service-button {
+    @apply bg-brand-gradient text-white border-transparent;
+  }
+  
+  .service-card:hover .service-icon {
+    @apply text-brand-secondary transform rotate-12 scale-110;
+  }
+  
+  .service-card-title {
+    @apply transition-all duration-300;
+  }
+  
+  .service-card:hover .service-card-title {
+    @apply bg-gradient-to-r from-[#2d4a63] to-[#345977] bg-clip-text text-transparent;
+  }
+  
+  /* Animation keyframes */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
   
   /* Hide Google Translate widget parts */

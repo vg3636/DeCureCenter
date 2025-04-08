@@ -29,8 +29,8 @@ const Header = () => {
   };
 
   const navLinkClass = (path: string) => {
-    return `text-gray-700 hover:text-brand-primary transition-all duration-200 ${
-      isActive(path) ? 'font-semibold text-brand-dark' : ''
+    return `text-gray-700 hover:text-[#2d4a63] transition-all duration-200 ${
+      isActive(path) ? 'font-semibold text-[#1e3a52]' : ''
     }`;
   };
 
@@ -58,10 +58,13 @@ const Header = () => {
                 {t('Services')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-64 border-primary-100 shadow-lg rounded-md overflow-hidden p-1">
+            <DropdownMenuContent align="end" className="w-64 shadow-lg rounded-md border-[#d0e8f2] overflow-hidden p-1">
               {SERVICES.map((service) => (
                 <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
-                  <Link to={`/services/${service.slug}`} className="w-full block px-3 py-2.5 text-gray-800 font-medium hover:bg-primary-50 hover:text-primary-700 rounded transition-colors duration-200">
+                  <Link 
+                    to={`/services/${service.slug}`} 
+                    className="w-full block px-3 py-2.5 text-gray-700 hover:bg-[#e6f7ff] hover:text-[#2d4a63] rounded transition-colors duration-200"
+                  >
                     {t(service.name)}
                   </Link>
                 </DropdownMenuItem>
@@ -84,7 +87,7 @@ const Header = () => {
           </div>
           
           <Link href="/contact">
-            <Button className="hidden md:inline-block bg-gradient-to-r from-primary-600 to-primary-700 hover:opacity-95 text-white shadow-sm">
+            <Button className="hidden md:inline-block bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] hover:opacity-95 text-white shadow-sm">
               {t('Book Appointment')}
             </Button>
           </Link>
@@ -110,7 +113,7 @@ const Header = () => {
             <Link href="/about">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/about')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass('/about')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('About')}
@@ -118,14 +121,18 @@ const Header = () => {
             </Link>
 
             <div className="py-2">
-              <div className="font-medium mb-2 text-primary-700">{t('Services')}</div>
+              <div className="font-medium mb-2 text-[#2d4a63]">{t('Services')}</div>
               <div className="pl-2 flex flex-col space-y-1">
                 {SERVICES.map((service) => (
                   <Link
                     key={service.slug}
                     to={`/services/${service.slug}`}
                     onClick={closeMenu}
-                    className={`block py-2 px-3 rounded ${isActive(`/services/${service.slug}`) ? 'bg-primary-50 text-primary-700 font-medium' : 'text-gray-700'} cursor-pointer hover:bg-primary-50 hover:text-primary-700 transition-colors duration-200`}
+                    className={`block py-2 px-3 rounded ${
+                      isActive(`/services/${service.slug}`) 
+                        ? 'bg-[#e6f7ff] text-[#2d4a63] font-medium' 
+                        : 'text-gray-700'
+                    } cursor-pointer hover:bg-[#e6f7ff] hover:text-[#2d4a63] transition-colors duration-200`}
                   >
                     {t(service.name)}
                   </Link>
@@ -136,7 +143,7 @@ const Header = () => {
             <Link href="/faq">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/faq')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass('/faq')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('FAQ')}
@@ -146,7 +153,7 @@ const Header = () => {
             <Link href="/contact">
               <span
                 data-nav-item
-                className={`block py-2 font-medium ${navLinkClass('/contact')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
+                className={`block py-2 font-medium ${navLinkClass('/contact')} cursor-pointer hover:text-[#2d4a63] transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('Contact')}
@@ -154,7 +161,7 @@ const Header = () => {
             </Link>
 
             <Link href="/contact">
-              <Button className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:opacity-95 text-white" onClick={closeMenu}>
+              <Button className="w-full bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] hover:opacity-95 text-white" onClick={closeMenu}>
                 {t('Book Appointment')}
               </Button>
             </Link>

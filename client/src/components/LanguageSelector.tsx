@@ -243,6 +243,9 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     // Get language from localStorage or default to English
     return localStorage.getItem('preferred-language') || 'en';
   });
+  
+  // For forced re-rendering on language change
+  const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
     // Store language preference
@@ -250,29 +253,56 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     
     // Handle RTL languages
     document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = currentLang;
     
     // Add a class to the body for language-specific styling
     document.body.className = document.body.className
       .replace(/lang-\w+/, '')
       .trim() + ` lang-${currentLang}`;
-      
+    
+    // Force re-render to ensure all translations are applied
+    setRefreshKey(prev => prev + 1);
+    
+    // Apply a mild refresh to ensure DOM updates
+    const timer = setTimeout(() => {
+      // This forces a reflow
+      document.body.style.zoom = "100.00001%";
+      setTimeout(() => { document.body.style.zoom = "100%"; }, 10);
+    }, 50);
+    
+    return () => clearTimeout(timer);
   }, [currentLang]);
   
-  // Translation function
+  // Enhanced translation function with better error handling and performance
   const t = (text: string) => {
-    if (currentLang === 'en') return text;
-    return translations[currentLang]?.[text] || text;
+    // Quick return for empty strings or when in English
+    if (!text || currentLang === 'en') return text || '';
+    
+    // Check if language dictionary exists
+    const langDict = translations[currentLang];
+    if (!langDict) return text;
+    
+    // Get translation or fall back to original text
+    return langDict[text] || text;
+  };
+
+  // Wrap setLanguage to ensure it doesn't change to same language
+  const setLanguage = (code: string) => {
+    if (code === currentLang) return;
+    setCurrentLang(code);
   };
 
   return (
     <LanguageContext.Provider 
       value={{ 
         currentLang, 
-        setLanguage: setCurrentLang,
+        setLanguage,
         t 
       }}
     >
-      {children}
+      <div key={refreshKey} className="contents">
+        {children}
+      </div>
     </LanguageContext.Provider>
   );
 };

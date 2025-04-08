@@ -23,9 +23,9 @@ const FeaturesSection = () => {
   ];
   
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-primary-50">
+    <section className="py-16 bg-gradient-to-b from-[#f8fafc] to-[#e6f7ff]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-primary-700 mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1e3a52] mb-4">
           {t('Why Choose De Cure Center')}
         </h2>
         <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
@@ -36,12 +36,12 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-lg shadow-md border border-primary-100 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-primary-200"
+              className="bg-white p-8 rounded-lg shadow-md border border-[#d0e8f2] flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#2d4a63]"
             >
-              <div className="text-primary-600 mb-5 bg-primary-50 p-4 rounded-full">
+              <div className="text-[#2d4a63] mb-5 bg-[#e6f7ff] p-4 rounded-full">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-center text-primary-800">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-center text-[#1e3a52]">{feature.title}</h3>
               <p className="text-gray-700 text-center">
                 {feature.description}
               </p>

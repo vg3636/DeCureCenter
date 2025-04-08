@@ -6,12 +6,12 @@ import { useTranslation } from './LanguageSelector';
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="bg-primary-900 text-white py-12">
+    <footer className="bg-[#1e3a52] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-semibold mb-4 text-white">De Cure Center</h3>
-            <p className="text-gray-200">
+            <p className="text-white">
               {t('Leading specialists in comprehensive medical care with over 12 years of experience bringing health and confidence back to our patients.')}
             </p>
           </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <li key={service.slug}>
                   <Link 
                     to={`/services/${service.slug}`} 
-                    className="text-gray-200 hover:text-white hover:underline transition duration-200 cursor-pointer"
+                    className="text-white hover:text-primary-200 hover:underline transition duration-200 cursor-pointer"
                   >
                     {t(service.name)}
                   </Link>
@@ -36,16 +36,16 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4 text-white">{t('Contact')}</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary-300" />
-                <span className="text-gray-200">123 Medical Plaza, Mumbai, India</span>
+                <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary-200" />
+                <span className="text-white">123 Medical Plaza, Mumbai, India</span>
               </li>
               <li className="flex items-start">
-                <Phone className="w-5 h-5 mr-2 mt-0.5 text-primary-300" />
-                <span className="text-gray-200">+91 1234 567 890</span>
+                <Phone className="w-5 h-5 mr-2 mt-0.5 text-primary-200" />
+                <span className="text-white">+91 1234 567 890</span>
               </li>
               <li className="flex items-start">
-                <Mail className="w-5 h-5 mr-2 mt-0.5 text-primary-300" />
-                <span className="text-gray-200">info@decurecenter.com</span>
+                <Mail className="w-5 h-5 mr-2 mt-0.5 text-primary-200" />
+                <span className="text-white">info@decurecenter.com</span>
               </li>
             </ul>
           </div>
@@ -53,24 +53,24 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-white">{t('Working Hours')}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-200">{t('Monday - Friday')}: 9am - 6pm</li>
-              <li className="text-gray-200">{t('Saturday')}: 9am - 4pm</li>
-              <li className="text-gray-200">{t('Sunday')}: {t('Closed')}</li>
+              <li className="text-white">{t('Monday - Friday')}: 9am - 6pm</li>
+              <li className="text-white">{t('Saturday')}: 9am - 4pm</li>
+              <li className="text-white">{t('Sunday')}: {t('Closed')}</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-700/50 pt-8">
+        <div className="border-t border-[#2d4a63] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-200 mb-4 md:mb-0">&copy; {new Date().getFullYear()} De Cure Center. {t('All rights reserved.')}</p>
+            <p className="text-white mb-4 md:mb-0">&copy; {new Date().getFullYear()} De Cure Center. {t('All rights reserved.')}</p>
             <div className="flex space-x-4">
-              <span className="text-primary-300 hover:text-white transition duration-200 cursor-pointer" aria-label="Facebook">
+              <span className="text-white hover:text-primary-200 transition duration-200 cursor-pointer" aria-label="Facebook">
                 <Facebook className="w-6 h-6" />
               </span>
-              <span className="text-primary-300 hover:text-white transition duration-200 cursor-pointer" aria-label="Instagram">
+              <span className="text-white hover:text-primary-200 transition duration-200 cursor-pointer" aria-label="Instagram">
                 <Instagram className="w-6 h-6" />
               </span>
-              <span className="text-primary-300 hover:text-white transition duration-200 cursor-pointer" aria-label="Twitter">
+              <span className="text-white hover:text-primary-200 transition duration-200 cursor-pointer" aria-label="Twitter">
                 <Twitter className="w-6 h-6" />
               </span>
             </div>

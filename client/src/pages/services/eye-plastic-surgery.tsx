@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Scissors, Activity, Shield, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const EyePlasticSurgery = () => {
   return (
@@ -221,7 +220,6 @@ const EyePlasticSurgery = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

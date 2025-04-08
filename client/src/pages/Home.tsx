@@ -4,7 +4,6 @@ import FeaturedServicesSection from '../components/FeaturedServicesSection';
 import StatisticsSection from '../components/StatisticsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import TechnologySection from '../components/TechnologySection';
-import CTASection from '../components/CTASection';
 import { Helmet } from 'react-helmet';
 
 const Home = () => {
@@ -20,7 +19,6 @@ const Home = () => {
       <StatisticsSection />
       <TestimonialsSection />
       <TechnologySection />
-      <CTASection />
     </>
   );
 };

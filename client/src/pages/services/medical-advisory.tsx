@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
-import CTASection from '../../components/CTASection';
 
 const MedicalAdvisory = () => {
   return (
@@ -178,7 +177,6 @@ const MedicalAdvisory = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

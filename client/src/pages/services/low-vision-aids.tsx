@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Search, Book, Monitor, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const LowVisionAids = () => {
   return (
@@ -213,7 +212,6 @@ const LowVisionAids = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Glasses, ShieldCheck, Gauge, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const Opticals = () => {
   return (
@@ -183,7 +182,6 @@ const Opticals = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import CTASection from '../components/CTASection';
 
 const faqItems = [
   {
@@ -96,7 +95,6 @@ const FAQ = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

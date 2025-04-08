@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { Plane, Hotel, User, Globe, FileCheck, Phone } from 'lucide-react';
-import CTASection from '../../components/CTASection';
 
 const MedicalTourism = () => {
   return (
@@ -238,7 +237,6 @@ const MedicalTourism = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

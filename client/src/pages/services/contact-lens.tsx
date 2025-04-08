@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Eye, Activity, ShieldCheck, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const ContactLens = () => {
   return (
@@ -214,7 +213,6 @@ const ContactLens = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

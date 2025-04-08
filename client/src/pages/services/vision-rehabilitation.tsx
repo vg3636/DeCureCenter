@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Eye, Activity, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const VisionRehabilitation = () => {
   return (
@@ -144,7 +143,6 @@ const VisionRehabilitation = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

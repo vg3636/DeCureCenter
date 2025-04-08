@@ -4,7 +4,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Eye, Droplet, Microscope } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 import { useTranslation } from '../../components/LanguageSelector';
 import { withTranslation, T } from '../../components/TranslationWrapper';
 
@@ -399,7 +398,7 @@ const Ophthalmology = () => {
         </div>
       </section>
 
-      <CTASection />
+
     </>
   );
 };

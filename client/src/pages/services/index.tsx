@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { SERVICES } from '../../lib/constants';
-import CTASection from '../../components/CTASection';
 
 const ServicesIndex = () => {
   // Handle image error by replacing with a placeholder
@@ -79,7 +78,6 @@ const ServicesIndex = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

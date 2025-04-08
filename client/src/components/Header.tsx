@@ -29,10 +29,10 @@ const Header = () => {
   };
 
   const navLinkClass = (path: string) => {
-    return `relative px-2 py-1 text-gray-700 transition-all duration-200 rounded ${
+    return `relative px-3 py-2 text-gray-700 transition-all duration-200 rounded ${
       isActive(path) 
-        ? 'font-semibold text-[#1e3a52] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#2d4a63]' 
-        : 'hover:text-[#2d4a63] hover:bg-[#f0f9ff] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-[#2d4a63]/60'
+        ? 'font-semibold bg-[#e6f7ff] text-[#1e3a52]' 
+        : 'hover:bg-[#e6f7ff] hover:text-[#2d4a63]'
     }`;
   };
 
@@ -66,7 +66,11 @@ const Header = () => {
                   <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
                     <Link 
                       to={`/services/${service.slug}`} 
-                      className="w-full block px-4 py-2.5 text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52] font-medium rounded transition-colors duration-200 border border-transparent hover:border-[#d0e8f2]"
+                      className={`w-full block px-3 py-2.5 transition-colors duration-200 rounded ${
+                        isActive(`/services/${service.slug}`) 
+                          ? 'bg-[#e6f7ff] text-[#1e3a52] font-medium' 
+                          : 'text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52]'
+                      }`}
                     >
                       {t(service.name)}
                     </Link>

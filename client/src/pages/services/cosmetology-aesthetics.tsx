@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Sparkles, Zap, Droplet } from 'lucide-react';
-import CTASection from '../../components/CTASection';
 
 const CosmetologyAesthetics = () => {
   return (
@@ -239,7 +238,6 @@ const CosmetologyAesthetics = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

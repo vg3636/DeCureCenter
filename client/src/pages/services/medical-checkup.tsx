@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { Activity, Heart, Eye, Brain, Shield } from 'lucide-react';
-import CTASection from '../../components/CTASection';
 
 const MedicalCheckup = () => {
   return (
@@ -288,7 +287,6 @@ const MedicalCheckup = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

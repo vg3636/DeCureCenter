@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../components/CTASection';
 
 const About = () => {
   return (
@@ -118,7 +117,7 @@ const About = () => {
         </div>
       </section>
 
-      <CTASection />
+
     </>
   );
 };

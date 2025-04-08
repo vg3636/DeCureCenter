@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Users, Clock, GripHorizontal, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const Hospitality = () => {
   return (
@@ -237,7 +236,6 @@ const Hospitality = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

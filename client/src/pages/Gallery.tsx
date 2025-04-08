@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import CTASection from '../components/CTASection';
 
 interface GalleryImage {
   src: string;
@@ -166,7 +165,6 @@ const Gallery = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

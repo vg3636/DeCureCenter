@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Eye, Target, Microscope, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import CTASection from '../../components/CTASection';
 
 const OcularOncology = () => {
   return (
@@ -186,7 +185,6 @@ const OcularOncology = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

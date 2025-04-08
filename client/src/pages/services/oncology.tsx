@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Activity, Heart, Brain, Users } from 'lucide-react';
-import CTASection from '../../components/CTASection';
 
 const Oncology = () => {
   return (
@@ -362,7 +361,6 @@ const Oncology = () => {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 };

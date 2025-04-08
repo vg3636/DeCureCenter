@@ -66,10 +66,10 @@ const Header = () => {
                   <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
                     <Link 
                       to={`/services/${service.slug}`} 
-                      className={`w-full block px-3 py-2.5 transition-colors duration-200 rounded ${
+                      className={`w-full block px-3 py-2.5 transition-all duration-200 rounded ${
                         isActive(`/services/${service.slug}`) 
                           ? 'bg-[#2d4a63] text-white font-medium' 
-                          : 'text-gray-700 hover:bg-[#2d4a63] hover:text-white'
+                          : 'text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1'
                       }`}
                     >
                       {t(service.name)}
@@ -140,7 +140,7 @@ const Header = () => {
                       isActive(`/services/${service.slug}`) 
                         ? 'bg-[#2d4a63] text-white font-medium' 
                         : 'text-gray-700'
-                    } cursor-pointer hover:bg-[#2d4a63] hover:text-white transition-colors duration-200`}
+                    } cursor-pointer hover:bg-[#e6f7ff] hover:text-[#1e3a52] hover:translate-x-1 transition-all duration-200`}
                   >
                     {t(service.name)}
                   </Link>

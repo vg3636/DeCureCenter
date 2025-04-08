@@ -185,7 +185,7 @@ const ProstheticServices = () => {
               Whether you're seeking a prosthetic eye following eye loss or need to replace an existing prosthesis, our team at De Cure Center is dedicated to providing you with a natural-looking, comfortable solution. Contact us today to schedule a consultation and take the first step toward restoring your appearance and confidence.
             </p>
             <Link href="/contact">
-              <Button className="bg-[#1e3a52] hover:bg-[#0f2942] text-white shadow-md hover:shadow-lg transition-all duration-300">
+              <Button className="bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] hover:opacity-95 text-white shadow-sm">
                 Schedule a Consultation
               </Button>
             </Link>

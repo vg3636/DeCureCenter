@@ -139,39 +139,39 @@ const EyePlasticSurgery = () => {
           </div>
 
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Our Approach to Eye Plastic Surgery</h2>
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Our Approach to Eye Plastic Surgery</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-semibold">1</div>
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] text-white flex items-center justify-center text-xl font-semibold">1</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Comprehensive Consultation</h3>
-                  <p className="text-neutral-700">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Comprehensive Consultation</h3>
+                  <p className="text-gray-700">
                     Our oculoplastic surgeons conduct thorough evaluations to understand your specific concerns and goals. We assess both the functional and aesthetic aspects of your condition, discussing all appropriate treatment options and developing a personalized surgical plan.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-semibold">2</div>
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] text-white flex items-center justify-center text-xl font-semibold">2</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Advanced Surgical Techniques</h3>
-                  <p className="text-neutral-700">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Advanced Surgical Techniques</h3>
+                  <p className="text-gray-700">
                     We utilize the latest surgical approaches, including minimally invasive techniques when appropriate, to achieve optimal results with reduced recovery time. Our surgeons prioritize precision and attention to detail to ensure natural-looking outcomes.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-semibold">3</div>
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] text-white flex items-center justify-center text-xl font-semibold">3</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Comprehensive Aftercare</h3>
-                  <p className="text-neutral-700">
+                  <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Comprehensive Aftercare</h3>
+                  <p className="text-gray-700">
                     Your care continues beyond surgery with detailed post-operative instructions, scheduled follow-up visits, and ongoing support throughout your recovery process. We monitor your healing and ensure you achieve the best possible functional and aesthetic outcomes.
                   </p>
                 </CardContent>
@@ -179,30 +179,30 @@ const EyePlasticSurgery = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Why Choose De Cure Center for Eye Plastic Surgery</h2>
+          <div className="bg-[#e6f7ff] rounded-lg p-8 mb-16">
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Why Choose De Cure Center for Eye Plastic Surgery</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3">Specialized Expertise</h3>
-                <p className="text-neutral-700 mb-4">
+              <div className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Specialized Expertise</h3>
+                <p className="text-gray-700 mb-4">
                   Our oculoplastic surgeons specialize exclusively in procedures around the eyes and face, combining ophthalmological knowledge with plastic surgery techniques. This focused expertise ensures the highest level of care for these delicate procedures.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3">Balanced Approach</h3>
-                <p className="text-neutral-700 mb-4">
+              <div className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Balanced Approach</h3>
+                <p className="text-gray-700 mb-4">
                   We prioritize both function and aesthetics, ensuring that surgical interventions improve vision and eye health while also enhancing appearance. This comprehensive approach leads to optimal outcomes that address all aspects of your condition.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3">Personalized Care</h3>
-                <p className="text-neutral-700 mb-4">
+              <div className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Personalized Care</h3>
+                <p className="text-gray-700 mb-4">
                   We recognize that each patient has unique concerns and goals. Our treatment plans are customized to your specific needs, taking into account your medical history, anatomical features, and desired results to achieve outcomes that are right for you.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-primary-600 mb-3">Integrated Services</h3>
-                <p className="text-neutral-700 mb-4">
+              <div className="bg-white border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Integrated Services</h3>
+                <p className="text-gray-700 mb-4">
                   As part of De Cure Center, our oculoplastic surgery department works closely with other eye care specialists to provide coordinated care. This multidisciplinary approach ensures comprehensive treatment for complex conditions affecting both the appearance and function of your eyes.
                 </p>
               </div>
@@ -210,12 +210,12 @@ const EyePlasticSurgery = () => {
           </div>
 
           <div className="text-center">
-            <h2 className="text-2xl font-semibold text-primary-600 mb-6">Transform Your Eye Health and Appearance</h2>
-            <p className="text-neutral-700 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6">Transform Your Eye Health and Appearance</h2>
+            <p className="text-gray-700 mb-8 max-w-3xl mx-auto">
               Whether you're experiencing functional issues with your eyelids or tear ducts, or you're interested in aesthetic enhancements to the eye area, our oculoplastic surgery team is here to help. Contact De Cure Center today to schedule a consultation and take the first step toward improved eye function and appearance.
             </p>
             <Link href="/contact">
-              <Button className="bg-primary-600 hover:bg-primary-700 text-white">
+              <Button className="bg-gradient-to-r from-[#2d4a63] to-[#1e3a52] hover:opacity-95 text-white shadow-sm">
                 Schedule a Consultation
               </Button>
             </Link>

@@ -26,34 +26,37 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-neutral-100">
+    <section className="py-16 bg-gradient-to-b from-[#f0f9ff] to-[#e0f2fe]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-primary-600 mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1e3a52] mb-4">
           Patient Stories
         </h2>
-        <p className="text-center text-neutral-800 mb-12">
+        <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
           Hear from our patients about their experience at De Cure Center
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+            <div 
+              key={index} 
+              className="bg-white p-6 rounded-lg shadow-md border border-[#d0e8f2] transition-all duration-300 hover:shadow-lg hover:border-[#2d4a63]"
+            >
               <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
+                <div className="text-[#f59e0b] flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
               </div>
-              <p className="text-neutral-800 mb-4">{testimonial.content}</p>
+              <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
               <div className="flex items-center">
                 <img
                   src={testimonial.image}
                   alt={`${testimonial.author} avatar`}
-                  className="w-10 h-10 rounded-full mr-4"
+                  className="w-12 h-12 rounded-full mr-4 border-2 border-[#d0e8f2]"
                 />
                 <div>
-                  <p className="font-semibold text-neutral-800">{testimonial.author}</p>
+                  <p className="font-semibold text-[#2d4a63]">{testimonial.author}</p>
                 </div>
               </div>
             </div>

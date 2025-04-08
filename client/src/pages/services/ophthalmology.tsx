@@ -18,24 +18,24 @@ const Ophthalmology = () => {
         <meta name="description" content={t("Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.")} />
       </Helmet>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-[#f8fafc] to-[#e6f7ff]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold text-[#1e3a52] mb-4">
               <T text="Ophthalmology" />
             </h1>
-            <p className="text-lg text-neutral-700">
+            <p className="text-lg text-gray-700">
               <T text="Specialized eye care and ocular prosthetics" />
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="md:w-1/2">
-              <h2 className="text-2xl font-semibold text-primary-600 mb-4">Comprehensive Eye Care</h2>
-              <p className="text-neutral-800 mb-4">
+              <h2 className="text-2xl font-semibold text-[#2d4a63] mb-4">Comprehensive Eye Care</h2>
+              <p className="text-gray-700 mb-4">
                 At De Cure Center, our ophthalmology department is dedicated to providing exceptional eye care services, from routine examinations to complex surgical procedures and specialized ocular prosthetics. Our team of experienced ophthalmologists, ocularists, and vision specialists work together to deliver personalized care using the latest diagnostic equipment and treatment techniques.
               </p>
-              <p className="text-neutral-800">
+              <p className="text-gray-700">
                 We understand the profound impact that vision has on quality of life, and we're committed to preserving, restoring, and enhancing your eye health. Whether you're seeking treatment for an eye condition, exploring ocular prosthetic options, or need routine vision care, our comprehensive services are designed to meet your needs with compassion and expertise.
               </p>
             </div>
@@ -43,7 +43,7 @@ const Ophthalmology = () => {
               <img
                 src="https://images.unsplash.com/photo-1579684453377-48ec05e6f15d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Ophthalmologist examining patient's eye"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-md border border-[#d0e8f2] w-full h-auto transition-all duration-300 hover:shadow-lg"
               />
             </div>
           </div>
@@ -57,18 +57,18 @@ const Ophthalmology = () => {
 
             <TabsContent value="prosthetics">
               <div className="mb-8">
-                <Card className="bg-primary-50 border-primary-200">
+                <Card className="bg-gradient-to-r from-[#e6f7ff] to-[#f0f9ff] border border-[#d0e8f2] shadow-md hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row items-center">
                       <div className="md:w-1/4 flex justify-center mb-6 md:mb-0">
-                        <Eye className="h-16 w-16 text-primary-600" />
+                        <Eye className="h-16 w-16 text-[#2d4a63]" />
                       </div>
                       <div className="md:w-3/4">
-                        <h3 className="text-xl font-semibold text-primary-600 mb-3">Our Ocular Prosthetics Expertise</h3>
-                        <p className="text-neutral-700 mb-4">
+                        <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Our Ocular Prosthetics Expertise</h3>
+                        <p className="text-gray-700 mb-4">
                           De Cure Center is renowned for our exceptional ocular prosthetics service. With over 5,000 custom prosthetic eyes fitted by India's leading oculists, we specialize in creating lifelike, comfortable, and functional prosthetic eyes that are virtually indistinguishable from natural eyes.
                         </p>
-                        <p className="text-neutral-700">
+                        <p className="text-gray-700">
                           Our team combines artistic craftsmanship with medical precision to match color, size, and even tiny blood vessels with remarkable accuracy, restoring not just appearance but confidence and quality of life.
                         </p>
                       </div>
@@ -78,13 +78,13 @@ const Ophthalmology = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Custom Prosthetic Eyes</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Custom Prosthetic Eyes</h3>
+                    <p className="text-gray-700 mb-4">
                       Individually crafted prosthetic eyes designed to match your natural eye in appearance and movement.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Detailed color matching process</li>
                       <li>Hand-painted iris and sclera</li>
                       <li>Custom sizing for optimal comfort</li>
@@ -94,13 +94,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Ocular Implants</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Ocular Implants</h3>
+                    <p className="text-gray-700 mb-4">
                       Surgical implants that provide a foundation for prosthetic eyes, enhancing mobility and natural appearance.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Integrated implant systems</li>
                       <li>Porous materials that integrate with tissue</li>
                       <li>Implants with motility pegs</li>
@@ -358,28 +358,28 @@ const Ophthalmology = () => {
             </TabsContent>
           </Tabs>
 
-          <div className="mt-16 p-8 bg-primary-50 rounded-lg border border-primary-100">
+          <div className="mt-16 p-8 bg-gradient-to-r from-[#e6f7ff] to-[#f0f9ff] rounded-lg border border-[#d0e8f2] shadow-md">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-semibold text-primary-600 mb-6 text-center">Why Choose De Cure Center for Ocular Care</h2>
+              <h2 className="text-2xl font-semibold text-[#1e3a52] mb-6 text-center">Why Choose De Cure Center for Ocular Care</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Expertise in Ocular Prosthetics</h3>
-                  <p className="text-neutral-700 mb-3">
+                <div className="bg-white p-6 rounded-lg border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-[#2d4a63] mb-3">Expertise in Ocular Prosthetics</h3>
+                  <p className="text-gray-700 mb-3">
                     With over 5,000 successful prosthetic fittings, our team has unparalleled experience in creating natural-looking, comfortable ocular prosthetics. Our oculists combine artistic skill with medical precision to achieve results that restore not just appearance, but confidence.
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Expert color matching techniques</li>
                     <li>Natural movement integration</li>
                     <li>Customized comfort adjustments</li>
                     <li>Long-term care support</li>
                   </ul>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-600 mb-3">Comprehensive Eye Care Approach</h3>
-                  <p className="text-neutral-700 mb-3">
+                <div className="bg-white p-6 rounded-lg border border-[#d0e8f2] shadow-sm hover:shadow-md transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-[#2d4a63] mb-3">Comprehensive Eye Care Approach</h3>
+                  <p className="text-gray-700 mb-3">
                     Beyond our specialization in ocular prosthetics, we provide complete eye care services with a patient-centered approach. Our ophthalmologists are board-certified specialists with expertise in various eye conditions and surgical procedures.
                   </p>
-                  <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
                     <li>Advanced diagnostic technology</li>
                     <li>Minimally invasive techniques</li>
                     <li>Personalized treatment plans</li>
@@ -389,7 +389,7 @@ const Ophthalmology = () => {
               </div>
               <div className="mt-8 text-center">
                 <Link href="/contact">
-                  <Button className="bg-primary-600 hover:bg-primary-700 text-white">
+                  <Button className="bg-[#1e3a52] hover:bg-[#0f2942] text-white shadow-md hover:shadow-lg transition-all duration-300">
                     Schedule Your Ophthalmology Consultation
                   </Button>
                 </Link>

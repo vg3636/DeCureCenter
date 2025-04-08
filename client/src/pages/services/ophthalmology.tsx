@@ -5,21 +5,27 @@ import { Eye, Droplet, Microscope } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import CTASection from '../../components/CTASection';
+import { useTranslation } from '../../components/LanguageSelector';
+import { withTranslation, T } from '../../components/TranslationWrapper';
 
 const Ophthalmology = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Helmet>
-        <title>Ophthalmology - De Cure Center</title>
-        <meta name="description" content="Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions." />
+        <title>{t('Ophthalmology')} - De Cure Center</title>
+        <meta name="description" content={t("Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.")} />
       </Helmet>
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">Ophthalmology</h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">
+              <T text="Ophthalmology" />
+            </h1>
             <p className="text-lg text-neutral-700">
-              Specialized eye care and ocular prosthetics
+              <T text="Specialized eye care and ocular prosthetics" />
             </p>
           </div>
 
@@ -398,4 +404,5 @@ const Ophthalmology = () => {
   );
 };
 
-export default Ophthalmology;
+// Wrap component with translation HOC for site-wide translation support
+export default withTranslation(Ophthalmology);

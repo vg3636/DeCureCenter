@@ -12,8 +12,15 @@ const languages = [
   { code: 'ar', name: 'Arabic' }
 ];
 
+// Define context interface
+interface LanguageContextType {
+  currentLang: string;
+  setLanguage: (code: string) => void;
+  t: (text: string) => string;
+}
+
 // Create language context for the entire application
-export const LanguageContext = createContext({
+export const LanguageContext = createContext<LanguageContextType>({
   currentLang: 'en',
   setLanguage: (code: string) => {},
   t: (text: string) => text
@@ -25,6 +32,8 @@ const translations: Record<string, Record<string, string>> = {
     'Book Appointment': 'अपॉइंटमेंट बुक करें',
     'Book Your Consultation': 'अपना परामर्श बुक करें',
     'Our Services': 'हमारी सेवाएँ',
+    'Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.': 'डी क्योर सेंटर में विशेष नेत्र देखभाल सेवाएं जिनमें ऑक्युलर प्रोस्थेटिक्स, सर्जिकल प्रक्रियाएं और विभिन्न नेत्र स्थितियों के लिए उपचार शामिल हैं।',
+    'Specialized eye care and ocular prosthetics': 'विशेष नेत्र देखभाल और ऑक्युलर प्रोस्थेटिक्स',
     'About': 'हमारे बारे में',
     'Contact': 'संपर्क',
     'Services': 'सेवाएँ',
@@ -75,6 +84,8 @@ const translations: Record<string, Record<string, string>> = {
     'Book Appointment': 'Prendre Rendez-vous',
     'Book Your Consultation': 'Réservez Votre Consultation',
     'Our Services': 'Nos Services',
+    'Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.': 'Services de soins oculaires spécialisés au De Cure Center, comprenant des prothèses oculaires, des procédures chirurgicales et des traitements pour diverses affections oculaires.',
+    'Specialized eye care and ocular prosthetics': 'Soins oculaires spécialisés et prothèses oculaires',
     'About': 'À Propos',
     'Contact': 'Contact',
     'Services': 'Services',
@@ -125,6 +136,8 @@ const translations: Record<string, Record<string, string>> = {
     'Book Appointment': 'Reservar Cita',
     'Book Your Consultation': 'Reserve Su Consulta',
     'Our Services': 'Nuestros Servicios',
+    'Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.': 'Servicios especializados de cuidado ocular en De Cure Center que incluyen prótesis oculares, procedimientos quirúrgicos y tratamientos para diversas afecciones oculares.',
+    'Specialized eye care and ocular prosthetics': 'Cuidado ocular especializado y prótesis oculares',
     'About': 'Acerca de',
     'Contact': 'Contacto',
     'Services': 'Servicios',
@@ -175,6 +188,8 @@ const translations: Record<string, Record<string, string>> = {
     'Book Appointment': 'حجز موعد',
     'Book Your Consultation': 'احجز استشارتك',
     'Our Services': 'خدماتنا',
+    'Specialized eye care services at De Cure Center including ocular prosthetics, surgical procedures, and treatments for various eye conditions.': 'خدمات رعاية العيون المتخصصة في مركز دي كيور بما في ذلك العيون الاصطناعية والإجراءات الجراحية وعلاجات مختلف حالات العيون.',
+    'Specialized eye care and ocular prosthetics': 'رعاية العيون المتخصصة والعيون الاصطناعية',
     'About': 'معلومات عنا',
     'Contact': 'اتصل بنا',
     'Services': 'الخدمات',

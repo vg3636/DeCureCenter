@@ -112,13 +112,13 @@ const Ophthalmology = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Prosthetic Fitting Process</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Prosthetic Fitting Process</h3>
+                    <p className="text-gray-700 mb-4">
                       Our comprehensive fitting process ensures optimal comfort, appearance, and functionality.
                     </p>
-                    <ol className="list-decimal pl-5 text-neutral-700 space-y-1">
+                    <ol className="list-decimal pl-5 text-gray-700 space-y-1">
                       <li>Initial consultation and assessment</li>
                       <li>Socket impression and measurements</li>
                       <li>Wax model fitting and adjustments</li>
@@ -130,13 +130,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Pediatric Ocular Prosthetics</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Pediatric Ocular Prosthetics</h3>
+                    <p className="text-gray-700 mb-4">
                       Specialized care for children with congenital conditions or those who have experienced eye loss.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Child-friendly approach to fitting</li>
                       <li>Growth considerations and adjustments</li>
                       <li>Support for families and caregivers</li>
@@ -146,13 +146,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Prosthetic Eye Care</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Prosthetic Eye Care</h3>
+                    <p className="text-gray-700 mb-4">
                       Comprehensive maintenance services and education to ensure longevity of your prosthetic eye.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Professional cleaning and polishing</li>
                       <li>Surface restoration</li>
                       <li>Detailed care instructions</li>
@@ -167,18 +167,18 @@ const Ophthalmology = () => {
 
             <TabsContent value="treatments">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="mr-4">
-                        <Eye className="h-10 w-10 text-primary-600" />
+                        <Eye className="h-10 w-10 text-[#2d4a63]" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-primary-600 mb-3">Glaucoma Management</h3>
-                        <p className="text-neutral-700 mb-3">
+                        <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Glaucoma Management</h3>
+                        <p className="text-gray-700 mb-3">
                           Comprehensive approach to treating and managing glaucoma to preserve vision and prevent progression.
                         </p>
-                        <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                        <ul className="list-disc pl-5 text-gray-700 space-y-1">
                           <li>Intraocular pressure monitoring</li>
                           <li>Visual field testing</li>
                           <li>Medical therapy options</li>
@@ -190,18 +190,18 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="mr-4">
-                        <Droplet className="h-10 w-10 text-primary-600" />
+                        <Droplet className="h-10 w-10 text-[#2d4a63]" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-primary-600 mb-3">Dry Eye Treatment</h3>
-                        <p className="text-neutral-700 mb-3">
+                        <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Dry Eye Treatment</h3>
+                        <p className="text-gray-700 mb-3">
                           Relief for dry eye syndrome through various therapeutic approaches tailored to your specific condition.
                         </p>
-                        <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                        <ul className="list-disc pl-5 text-gray-700 space-y-1">
                           <li>Comprehensive dry eye evaluation</li>
                           <li>Artificial tear recommendations</li>
                           <li>Punctal plug insertion</li>
@@ -214,13 +214,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Retinal Disorder Management</h3>
-                    <p className="text-neutral-700 mb-3">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Retinal Disorder Management</h3>
+                    <p className="text-gray-700 mb-3">
                       Specialized care for conditions affecting the retina, including diabetic retinopathy and macular degeneration.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Advanced retinal imaging</li>
                       <li>Intravitreal injections</li>
                       <li>Laser photocoagulation</li>
@@ -230,13 +230,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3">Corneal Conditions</h3>
-                    <p className="text-neutral-700 mb-3">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3">Corneal Conditions</h3>
+                    <p className="text-gray-700 mb-3">
                       Diagnosis and treatment of various corneal disorders to preserve clarity and vision.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Keratoconus management</li>
                       <li>Corneal infection treatment</li>
                       <li>Corneal abrasion care</li>
@@ -250,16 +250,16 @@ const Ophthalmology = () => {
 
             <TabsContent value="surgeries">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex justify-center mb-4">
-                      <Microscope className="h-10 w-10 text-primary-600" />
+                      <Microscope className="h-10 w-10 text-[#2d4a63]" />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Cataract Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Cataract Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Advanced cataract removal with premium lens options for improved vision at all distances.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Phacoemulsification technique</li>
                       <li>Laser-assisted cataract surgery</li>
                       <li>Monofocal lens implants</li>
@@ -269,16 +269,16 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex justify-center mb-4">
-                      <Eye className="h-10 w-10 text-primary-600" />
+                      <Eye className="h-10 w-10 text-[#2d4a63]" />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">LASIK & Refractive Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">LASIK & Refractive Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Vision correction procedures to reduce dependence on glasses and contact lenses.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>LASIK surgery</li>
                       <li>PRK (Photorefractive Keratectomy)</li>
                       <li>SMILE procedure</li>
@@ -288,16 +288,16 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex justify-center mb-4">
-                      <Droplet className="h-10 w-10 text-primary-600" />
+                      <Droplet className="h-10 w-10 text-[#2d4a63]" />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Glaucoma Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Glaucoma Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Surgical interventions for glaucoma when medication and laser treatments are insufficient.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Trabeculectomy</li>
                       <li>Tube shunt procedures</li>
                       <li>Minimally invasive glaucoma surgery (MIGS)</li>
@@ -307,13 +307,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Corneal Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Corneal Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Procedures to restore corneal function and clarity for improved vision.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Corneal transplantation (PK, DALK, DSEK, DMEK)</li>
                       <li>Pterygium removal</li>
                       <li>Corneal crosslinking for keratoconus</li>
@@ -323,13 +323,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Oculoplastic Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Oculoplastic Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Reconstructive and cosmetic procedures for the eyelids, tear ducts, and orbit.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Eyelid ptosis repair</li>
                       <li>Blepharoplasty</li>
                       <li>Entropion/ectropion correction</li>
@@ -339,13 +339,13 @@ const Ophthalmology = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border border-[#d0e8f2] shadow-md hover:shadow-lg hover:border-[#2d4a63] transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-primary-600 mb-3 text-center">Vitreoretinal Surgery</h3>
-                    <p className="text-neutral-700 mb-4">
+                    <h3 className="text-xl font-semibold text-[#1e3a52] mb-3 text-center">Vitreoretinal Surgery</h3>
+                    <p className="text-gray-700 mb-4">
                       Microsurgical interventions for conditions affecting the vitreous and retina.
                     </p>
-                    <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
                       <li>Retinal detachment repair</li>
                       <li>Macular hole surgery</li>
                       <li>Vitrectomy for diabetic retinopathy</li>

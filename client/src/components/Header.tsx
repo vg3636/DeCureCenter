@@ -29,8 +29,10 @@ const Header = () => {
   };
 
   const navLinkClass = (path: string) => {
-    return `text-gray-700 hover:text-[#2d4a63] transition-all duration-200 ${
-      isActive(path) ? 'font-semibold text-[#1e3a52]' : ''
+    return `relative px-2 py-1 text-gray-700 transition-all duration-200 rounded ${
+      isActive(path) 
+        ? 'font-semibold text-[#1e3a52] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#2d4a63]' 
+        : 'hover:text-[#2d4a63] hover:bg-[#f0f9ff] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-[#2d4a63]/60'
     }`;
   };
 
@@ -58,17 +60,19 @@ const Header = () => {
                 {t('Services')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-64 shadow-lg rounded-md border-[#d0e8f2] overflow-hidden p-1">
-              {SERVICES.map((service) => (
-                <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
-                  <Link 
-                    to={`/services/${service.slug}`} 
-                    className="w-full block px-3 py-2.5 text-gray-700 hover:bg-[#e6f7ff] hover:text-[#2d4a63] rounded transition-colors duration-200"
-                  >
-                    {t(service.name)}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
+            <DropdownMenuContent align="end" className="w-72 shadow-lg rounded-md border border-[#d0e8f2] overflow-hidden p-2 bg-white">
+              <div className="grid grid-cols-1 gap-1">
+                {SERVICES.map((service) => (
+                  <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
+                    <Link 
+                      to={`/services/${service.slug}`} 
+                      className="w-full block px-4 py-2.5 text-gray-700 hover:bg-[#e6f7ff] hover:text-[#1e3a52] font-medium rounded transition-colors duration-200 border border-transparent hover:border-[#d0e8f2]"
+                    >
+                      {t(service.name)}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
 

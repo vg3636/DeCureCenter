@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
@@ -9,45 +9,116 @@ const languages = [
   { code: 'hi', name: 'Hindi' },
   { code: 'fr', name: 'French' },
   { code: 'es', name: 'Spanish' },
-  { code: 'de', name: 'German' },
-  { code: 'zh-CN', name: 'Chinese' },
-  { code: 'ar', name: 'Arabic' },
-  { code: 'ja', name: 'Japanese' }
+  { code: 'ar', name: 'Arabic' }
 ];
 
-const LanguageSelector = () => {
-  const [currentLang, setCurrentLang] = useState('en');
+// Create language context for the entire application
+export const LanguageContext = createContext({
+  currentLang: 'en',
+  setLanguage: (code: string) => {},
+  t: (text: string) => text
+});
 
-  const handleChangeLanguage = (langCode: string) => {
-    setCurrentLang(langCode);
+// Sample translations - in a real app, these would come from an API or JSON files
+const translations: Record<string, Record<string, string>> = {
+  'hi': {
+    'Book Appointment': 'अपॉइंटमेंट बुक करें',
+    'Our Services': 'हमारी सेवाएँ',
+    'About': 'हमारे बारे में',
+    'Contact': 'संपर्क',
+    'Services': 'सेवाएँ',
+    'FAQ': 'सामान्य प्रश्न',
+    'Home': 'होम'
+  },
+  'fr': {
+    'Book Appointment': 'Prendre Rendez-vous',
+    'Our Services': 'Nos Services',
+    'About': 'À Propos',
+    'Contact': 'Contact',
+    'Services': 'Services',
+    'FAQ': 'FAQ',
+    'Home': 'Accueil'
+  },
+  'es': {
+    'Book Appointment': 'Reservar Cita',
+    'Our Services': 'Nuestros Servicios',
+    'About': 'Acerca de',
+    'Contact': 'Contacto',
+    'Services': 'Servicios',
+    'FAQ': 'Preguntas Frecuentes',
+    'Home': 'Inicio'
+  },
+  'ar': {
+    'Book Appointment': 'حجز موعد',
+    'Our Services': 'خدماتنا',
+    'About': 'معلومات عنا',
+    'Contact': 'اتصل بنا',
+    'Services': 'الخدمات',
+    'FAQ': 'الأسئلة الشائعة',
+    'Home': 'الصفحة الرئيسية'
+  }
+};
+
+export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
+  const [currentLang, setCurrentLang] = useState(() => {
+    // Get language from localStorage or default to English
+    return localStorage.getItem('preferred-language') || 'en';
+  });
+
+  useEffect(() => {
+    // Store language preference
+    localStorage.setItem('preferred-language', currentLang);
     
-    if (langCode === 'en') {
-      // If English, reset the page to original content
-      window.location.reload();
-      return;
-    }
+    // Handle RTL languages
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
     
-    // Create the URL for the translation API
-    const currentUrl = window.location.href;
-    const translateUrl = `https://translate.google.com/translate?sl=auto&tl=${langCode}&u=${encodeURIComponent(currentUrl)}`;
-    
-    // Open in a new tab with translation
-    window.open(translateUrl, '_blank');
+    // Add a class to the body for language-specific styling
+    document.body.className = document.body.className
+      .replace(/lang-\w+/, '')
+      .trim() + ` lang-${currentLang}`;
+      
+  }, [currentLang]);
+  
+  // Translation function
+  const t = (text: string) => {
+    if (currentLang === 'en') return text;
+    return translations[currentLang]?.[text] || text;
   };
+
+  return (
+    <LanguageContext.Provider 
+      value={{ 
+        currentLang, 
+        setLanguage: setCurrentLang,
+        t 
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+// Custom hook to use translations
+export const useTranslation = () => {
+  return useContext(LanguageContext);
+};
+
+const LanguageSelector = () => {
+  const { currentLang, setLanguage } = useContext(LanguageContext);
 
   return (
     <div className="relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Select language" className="text-brand-light hover:text-brand-primary">
+          <Button variant="ghost" size="icon" aria-label="Select language" className="text-gray-600 hover:text-brand-primary">
             <Globe className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="border-brand-light">
+        <DropdownMenuContent align="end">
           {languages.map((lang) => (
             <DropdownMenuItem 
               key={lang.code}
-              onClick={() => handleChangeLanguage(lang.code)}
+              onClick={() => setLanguage(lang.code)}
               className={currentLang === lang.code ? "bg-brand-primary/10 text-brand-primary font-medium" : ""}
             >
               {lang.name}

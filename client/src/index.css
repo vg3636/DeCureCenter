@@ -22,11 +22,48 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   
+  /* RTL Language Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+  
+  [dir="rtl"] .ml-1, 
+  [dir="rtl"] .ml-2, 
+  [dir="rtl"] .ml-3, 
+  [dir="rtl"] .ml-4 {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+  
+  [dir="rtl"] .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  [dir="rtl"] .mr-1,
+  [dir="rtl"] .mr-2,
+  [dir="rtl"] .mr-3,
+  [dir="rtl"] .mr-4 {
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+  
+  [dir="rtl"] .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  
+  [dir="rtl"] .space-x-4 > * + * {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  
   /* Color theme variables */
   :root {
     --dc-primary: #2d4a63;
     --dc-secondary: #345977;
-    --dc-light: #6a8bad;
+    --dc-light: #4d7299; /* Darker/more saturated for better readability */
+    --dc-dark-text: #1a2a38; /* Darker text for better contrast */
     --dc-hover: #274966;
     --dc-gradient-start: #2d4a63;
     --dc-gradient-end: #345977;
@@ -34,15 +71,19 @@
   
   /* Global theme styles */
   .text-brand-primary {
-    @apply text-[#2d4a63];
+    @apply text-[#1a2a38]; /* Darker for better readability */
   }
   
   .text-brand-secondary {
-    @apply text-[#345977]; 
+    @apply text-[#2d4a63]; /* Slightly darker for better readability */
   }
   
   .text-brand-light {
-    @apply text-[#6a8bad];
+    @apply text-[#4d7299]; /* Darker for better readability */
+  }
+  
+  .text-brand-dark {
+    @apply text-[#1a2a38];
   }
   
   .bg-brand-primary {
@@ -58,11 +99,11 @@
   }
   
   .border-brand {
-    @apply border-[#6a8bad];
+    @apply border-[#4d7299];
   }
 
   .border-brand-light {
-    @apply border-[#6a8bad]/30;
+    @apply border-[#4d7299]/30;
   }
   
   /* Custom styles for statistics section */
@@ -142,29 +183,22 @@
     animation: float 3s ease-in-out infinite;
   }
   
-  /* Hide Google Translate widget parts */
-  .goog-te-banner-frame.skiptranslate {
-    display: none !important;
+  /* Language specific styles */
+  html[dir="rtl"] .bg-gradient-to-r {
+    @apply bg-gradient-to-l;
   }
   
-  body {
-    top: 0 !important;
+  /* RTL support for service cards */
+  [dir="rtl"] .service-card::before {
+    @apply left-auto right-0 origin-right;
   }
   
-  .VIpgJd-ZVi9od-ORHb-OEVmcd {
-    display: none !important;
+  /* Add language classes to font adjustments */
+  .lang-ar {
+    font-family: 'Amiri', 'Segoe UI', Tahoma, sans-serif;
   }
   
-  .goog-logo-link, 
-  .goog-te-gadget span {
-    display: none !important;
-  }
-  
-  .goog-te-gadget {
-    color: transparent !important;
-  }
-  
-  .goog-te-menu-value {
-    color: inherit !important;
+  .lang-hi {
+    font-family: 'Hind', 'Segoe UI', Tahoma, sans-serif;
   }
 }

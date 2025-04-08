@@ -6,28 +6,36 @@ import NotFound from "@/pages/not-found";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import FAQ from "./pages/FAQ";
-import Gallery from "./pages/Gallery";
-import ServicesIndex from "./pages/services/index";
-import AlternativeMedicine from "./pages/services/alternative-medicine";
-import MedicalAdvisory from "./pages/services/medical-advisory";
-import MedicalCheckup from "./pages/services/medical-checkup";
-import MedicalTourism from "./pages/services/medical-tourism";
-import CosmetologyAesthetics from "./pages/services/cosmetology-aesthetics";
-import PlasticSurgery from "./pages/services/plastic-surgery";
-import Oncology from "./pages/services/oncology";
-import Ophthalmology from "./pages/services/ophthalmology";
-import VisionRehabilitation from "./pages/services/vision-rehabilitation";
-import OcularOncology from "./pages/services/ocular-oncology";
-import ProstheticServices from "./pages/services/prosthetic-services";
-import Opticals from "./pages/services/opticals";
-import LowVisionAids from "./pages/services/low-vision-aids";
-import EyePlasticSurgery from "./pages/services/eye-plastic-surgery";
-import ContactLens from "./pages/services/contact-lens";
-import Hospitality from "./pages/services/hospitality";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { LanguageProvider } from "./components/LanguageSelector";
+
+// Import loading indicator
+import LoadingIndicator from './components/LoadingIndicator';
+
+// Lazy load pages for better performance
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const ServicesIndex = lazy(() => import("./pages/services/index"));
+
+// Lazy load service pages
+const AlternativeMedicine = lazy(() => import("./pages/services/alternative-medicine"));
+const MedicalAdvisory = lazy(() => import("./pages/services/medical-advisory"));
+const MedicalCheckup = lazy(() => import("./pages/services/medical-checkup"));
+const MedicalTourism = lazy(() => import("./pages/services/medical-tourism"));
+const CosmetologyAesthetics = lazy(() => import("./pages/services/cosmetology-aesthetics"));
+const PlasticSurgery = lazy(() => import("./pages/services/plastic-surgery"));
+const Oncology = lazy(() => import("./pages/services/oncology"));
+const Ophthalmology = lazy(() => import("./pages/services/ophthalmology"));
+const VisionRehabilitation = lazy(() => import("./pages/services/vision-rehabilitation"));
+const OcularOncology = lazy(() => import("./pages/services/ocular-oncology"));
+const ProstheticServices = lazy(() => import("./pages/services/prosthetic-services"));
+const Opticals = lazy(() => import("./pages/services/opticals"));
+const LowVisionAids = lazy(() => import("./pages/services/low-vision-aids"));
+const EyePlasticSurgery = lazy(() => import("./pages/services/eye-plastic-surgery"));
+const ContactLens = lazy(() => import("./pages/services/contact-lens"));
+const Hospitality = lazy(() => import("./pages/services/hospitality"));
 
 // Add scroll to top behavior
 function ScrollToTop() {
@@ -57,31 +65,33 @@ function Router() {
       <Header />
       <ScrollToTop />
       <main className="flex-grow">
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/faq" component={FAQ} />
-          <Route path="/gallery" component={Gallery} />
-          <Route path="/services" component={ServicesIndex} />
-          <Route path="/services/alternative-medicine" component={AlternativeMedicine} />
-          <Route path="/services/medical-advisory" component={MedicalAdvisory} />
-          <Route path="/services/medical-checkup" component={MedicalCheckup} />
-          <Route path="/services/medical-tourism" component={MedicalTourism} />
-          <Route path="/services/cosmetology-aesthetics" component={CosmetologyAesthetics} />
-          <Route path="/services/plastic-surgery" component={PlasticSurgery} />
-          <Route path="/services/oncology" component={Oncology} />
-          <Route path="/services/ophthalmology" component={Ophthalmology} />
-          <Route path="/services/vision-rehabilitation" component={VisionRehabilitation} />
-          <Route path="/services/ocular-oncology" component={OcularOncology} />
-          <Route path="/services/prosthetic-services" component={ProstheticServices} />
-          <Route path="/services/opticals" component={Opticals} />
-          <Route path="/services/low-vision-aids" component={LowVisionAids} />
-          <Route path="/services/eye-plastic-surgery" component={EyePlasticSurgery} />
-          <Route path="/services/contact-lens" component={ContactLens} />
-          <Route path="/services/hospitality" component={Hospitality} />
-          <Route component={NotFound} />
-        </Switch>
+        <Suspense fallback={<LoadingIndicator />}>
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/services" component={ServicesIndex} />
+            <Route path="/services/alternative-medicine" component={AlternativeMedicine} />
+            <Route path="/services/medical-advisory" component={MedicalAdvisory} />
+            <Route path="/services/medical-checkup" component={MedicalCheckup} />
+            <Route path="/services/medical-tourism" component={MedicalTourism} />
+            <Route path="/services/cosmetology-aesthetics" component={CosmetologyAesthetics} />
+            <Route path="/services/plastic-surgery" component={PlasticSurgery} />
+            <Route path="/services/oncology" component={Oncology} />
+            <Route path="/services/ophthalmology" component={Ophthalmology} />
+            <Route path="/services/vision-rehabilitation" component={VisionRehabilitation} />
+            <Route path="/services/ocular-oncology" component={OcularOncology} />
+            <Route path="/services/prosthetic-services" component={ProstheticServices} />
+            <Route path="/services/opticals" component={Opticals} />
+            <Route path="/services/low-vision-aids" component={LowVisionAids} />
+            <Route path="/services/eye-plastic-surgery" component={EyePlasticSurgery} />
+            <Route path="/services/contact-lens" component={ContactLens} />
+            <Route path="/services/hospitality" component={Hospitality} />
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
       </main>
       <Footer />
     </div>
@@ -91,8 +101,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <LanguageProvider>
+        <Router />
+        <Toaster />
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

@@ -52,20 +52,16 @@ const StatisticsSection = () => {
           {statistics.map((stat, index) => (
             <div 
               key={index} 
-              className="p-6 bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-50"
-              style={{animationDelay: `${index * 0.1}s`}}
+              className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50"
             >
-              <div className="mb-3 flex justify-center">
-                <div className="w-12 h-1 bg-gradient-to-r from-[#2d4a63] to-[#345977] rounded"></div>
-              </div>
-              <p className="statistic-value bg-gradient-to-r from-[#2d4a63] to-[#345977] bg-clip-text text-transparent">
+              <p className="statistic-value text-brand-primary">
                 {isVisible ? (
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 ) : (
                   `0${stat.suffix}`
                 )}
               </p>
-              <p className="statistic-label font-medium">{stat.label}</p>
+              <p className="statistic-label text-gray-600 font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

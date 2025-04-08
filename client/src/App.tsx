@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import { lazy, Suspense, useEffect } from "react";
 import { LanguageProvider } from "./components/LanguageSelector";
+import { TranslationRefreshProvider } from "./components/TranslationWrapper";
 
 // Import loading indicator
 import LoadingIndicator from './components/LoadingIndicator';
@@ -115,8 +116,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
-        <Router />
-        <Toaster />
+        <TranslationRefreshProvider>
+          <Router />
+          <Toaster />
+        </TranslationRefreshProvider>
       </LanguageProvider>
     </QueryClientProvider>
   );

@@ -50,9 +50,9 @@ const Ophthalmology = () => {
 
           <Tabs defaultValue="prosthetics" className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="prosthetics">Ocular Prosthetics</TabsTrigger>
-              <TabsTrigger value="treatments">Eye Treatments</TabsTrigger>
-              <TabsTrigger value="surgeries">Surgical Procedures</TabsTrigger>
+              <TabsTrigger value="prosthetics">{t('Ocular Prosthetics')}</TabsTrigger>
+              <TabsTrigger value="treatments">{t('Eye Treatments')}</TabsTrigger>
+              <TabsTrigger value="surgeries">{t('Surgical Procedures')}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="prosthetics">

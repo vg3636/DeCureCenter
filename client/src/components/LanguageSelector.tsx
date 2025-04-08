@@ -289,16 +289,20 @@ const LanguageSelector = () => {
     <div className="relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Select language" className="text-gray-600 hover:text-brand-primary">
+          <Button variant="outline" size="icon" aria-label="Select language" className="text-primary-600 hover:text-primary-700 hover:bg-primary-50 transition-colors duration-200 border-primary-100 hover:border-primary-200">
             <Globe className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align="end" className="shadow-lg rounded-md border-primary-100 overflow-hidden p-1">
           {languages.map((lang) => (
             <DropdownMenuItem 
               key={lang.code}
               onClick={() => setLanguage(lang.code)}
-              className={currentLang === lang.code ? "bg-brand-primary/10 text-brand-primary font-medium" : ""}
+              className={`px-3 py-2.5 transition-colors duration-200 hover:bg-primary-50 rounded ${
+                currentLang === lang.code 
+                ? "bg-primary-50 text-primary-700 font-medium" 
+                : "text-gray-700 hover:text-primary-700"
+              }`}
             >
               {lang.name}
             </DropdownMenuItem>

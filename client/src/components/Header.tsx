@@ -58,12 +58,12 @@ const Header = () => {
                 {t('Services')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-64 border-brand-light">
+            <DropdownMenuContent align="end" className="w-64 border-primary-100 shadow-lg rounded-md overflow-hidden p-1">
               {SERVICES.map((service) => (
-                <DropdownMenuItem key={service.slug} onClick={() => {
-                  window.location.href = `/services/${service.slug}`;
-                }}>
-                  <span className="w-full block px-2 text-gray-800 font-medium hover:bg-brand-primary/10 hover:text-brand-primary rounded py-1">{service.name}</span>
+                <DropdownMenuItem key={service.slug} asChild className="p-0 focus:bg-transparent hover:bg-transparent">
+                  <Link to={`/services/${service.slug}`} className="w-full block px-3 py-2.5 text-gray-800 font-medium hover:bg-primary-50 hover:text-primary-700 rounded transition-colors duration-200">
+                    {t(service.name)}
+                  </Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -84,7 +84,7 @@ const Header = () => {
           </div>
           
           <Link href="/contact">
-            <Button className="hidden md:inline-block bg-brand-gradient hover:opacity-90 text-white">
+            <Button className="hidden md:inline-block bg-gradient-to-r from-primary-600 to-primary-700 hover:opacity-95 text-white shadow-sm">
               {t('Book Appointment')}
             </Button>
           </Link>
@@ -110,7 +110,7 @@ const Header = () => {
             <Link href="/about">
               <span
                 data-nav-item
-                className={`block ${navLinkClass('/about')} cursor-pointer`}
+                className={`block py-2 font-medium ${navLinkClass('/about')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('About')}
@@ -118,20 +118,17 @@ const Header = () => {
             </Link>
 
             <div className="py-2">
-              <div className="font-medium mb-2 text-brand-primary">{t('Services')}</div>
-              <div className="pl-4 flex flex-col space-y-2">
+              <div className="font-medium mb-2 text-primary-700">{t('Services')}</div>
+              <div className="pl-2 flex flex-col space-y-1">
                 {SERVICES.map((service) => (
-                  <span
+                  <Link
                     key={service.slug}
-                    data-nav-item
-                    className={`block py-1 px-2 rounded ${navLinkClass(`/services/${service.slug}`)} cursor-pointer text-gray-800 font-medium hover:bg-brand-primary/10 hover:text-brand-primary`}
-                    onClick={() => {
-                      window.location.href = `/services/${service.slug}`;
-                      closeMenu();
-                    }}
+                    to={`/services/${service.slug}`}
+                    onClick={closeMenu}
+                    className={`block py-2 px-3 rounded ${isActive(`/services/${service.slug}`) ? 'bg-primary-50 text-primary-700 font-medium' : 'text-gray-700'} cursor-pointer hover:bg-primary-50 hover:text-primary-700 transition-colors duration-200`}
                   >
-                    {service.name}
-                  </span>
+                    {t(service.name)}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -139,7 +136,7 @@ const Header = () => {
             <Link href="/faq">
               <span
                 data-nav-item
-                className={`block ${navLinkClass('/faq')} cursor-pointer`}
+                className={`block py-2 font-medium ${navLinkClass('/faq')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('FAQ')}
@@ -149,7 +146,7 @@ const Header = () => {
             <Link href="/contact">
               <span
                 data-nav-item
-                className={`block ${navLinkClass('/contact')} cursor-pointer`}
+                className={`block py-2 font-medium ${navLinkClass('/contact')} cursor-pointer hover:text-primary-700 transition-colors duration-200`}
                 onClick={closeMenu}
               >
                 {t('Contact')}
@@ -157,12 +154,12 @@ const Header = () => {
             </Link>
 
             <Link href="/contact">
-              <Button className="w-full bg-brand-gradient hover:opacity-90" onClick={closeMenu}>
+              <Button className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:opacity-95 text-white" onClick={closeMenu}>
                 {t('Book Appointment')}
               </Button>
             </Link>
 
-            <div className="flex justify-end pt-2 border-t border-gray-100">
+            <div className="flex justify-end pt-4 mt-2 border-t border-gray-100">
               <LanguageSelector />
             </div>
           </div>

@@ -1,0 +1,107 @@
+**Fully Complete Revision Prompt for De Cure Center Website on Replit:**
+
+Revise the existing website code for De Cure Center to address the following, creating a fully functional website with content for all pages and a Google Translate language selector:
+
+**Homepage Revision - Emphasize All Services:**
+
+The current homepage overemphasizes prosthetic eye treatment. Please modify the homepage to prominently feature **all** the services offered by De Cure Center. This includes:
+
+* Ophthalmology
+* Vision Rehabilitation
+* Ocular Oncology
+* Prosthetic services
+* Opticals
+* Low vision aids
+* Eye Plastic surgery
+* Contact Lens
+* Hospitality
+
+**Implementation:**
+
+1.  **Add a "Featured Services" Section:** Create a new, visually prominent section on the homepage (ideally below the hero section or in a clear, easily noticeable area).
+2.  **List All Services:** Within this "Featured Services" section, clearly list all the services mentioned above.
+3.  **Brief Descriptions:** For each service, include a concise and informative description (use the content provided below for the individual service sub-pages as a basis for these brief descriptions).
+4.  **"Learn More" Links:** For each service listed, provide a clear "Learn More" button or link that directs the user to the corresponding sub-page within the `services/` directory (e.g., "Learn More about Ophthalmology" should link to `/services/ophthalmology.html`).
+5.  **Visual Presentation:** Ensure the "Featured Services" section is visually appealing and well-organized. Consider using a grid layout, a carousel, or distinct blocks for each service. The design should be consistent with the overall style of the website as defined by the design reference image.
+
+**Add Google Translate Language Selector:**
+
+1.  **Implement a language selector:** Add a language selector to the website, ideally located in the header (top right) or the footer.
+2.  **Use Google Translate:** This selector should utilize the Google Translate functionality to allow users to translate the website content into their preferred language.
+3.  **HTML Structure:** Add the necessary HTML for the language selector (e.g., a dropdown menu or a series of flags/links).
+4.  **JavaScript Integration:** Include the required JavaScript code to integrate with the Google Translate API. You can find instructions and code snippets on the Google Translate API documentation. Ensure the functionality is correctly implemented.
+
+**Design Reference:**
+
+* Maintain the overall layout, color scheme, typography, and visual style of the website as defined by the design reference image while implementing these changes, including the placement and styling of the language selector.
+
+**Service Sub-Pages Content (HTML):**
+
+Ensure the following content is present within the respective HTML files in the `services/` directory:
+
+* **`services/ophthalmology.html`:**
+    ```html
+    <h1>Ophthalmology</h1>
+    <p>Our comprehensive ophthalmology department at De Cure Center offers a full spectrum of eye care services, from routine eye exams to the diagnosis and treatment of complex eye conditions. Our experienced ophthalmologists utilize advanced technology to ensure the best possible vision outcomes for our patients.</p>
+    ```
+
+* **`services/vision-rehabilitation.html`:**
+    ```html
+    <h1>Vision Rehabilitation</h1>
+    <p>De Cure Center provides specialized vision rehabilitation services to help individuals with vision loss regain independence and improve their quality of life. Our tailored programs include adaptive techniques, assistive devices, and strategies to maximize remaining vision.</p>
+    ```
+
+* **`services/ocular-oncology.html`:**
+    ```html
+    <h1>Ocular Oncology</h1>
+    <p>De Cure Center houses a dedicated ocular oncology unit specializing in the diagnosis and treatment of eye tumors and cancers. Our multidisciplinary team provides world-class care for conditions affecting the eyelids, conjunctiva, cornea, orbit, and intraocular structures.</p>
+    ```
+
+* **`services/prosthetic-services.html`:**
+    ```html
+    <h1>Prosthetic Services</h1>
+    <p>At De Cure Center, we offer comprehensive prosthetic services for patients who have lost an eye or require a cosmetic shell. Our experienced ocularists provide custom-made, natural-looking prosthetic eyes that ensure comfort, proper fit, and enhanced aesthetics.</p>
+    ```
+
+* **`services/opticals.html`:**
+    ```html
+    <h1>Opticals</h1>
+    <p>De Cure Center features a well-equipped optical department offering a wide selection of high-quality eyeglasses and frames to meet diverse visual needs and preferences. Our experienced opticians provide expert fitting and dispensing services.</p>
+    ```
+
+* **`services/low-vision-aids.html`:**
+    ```html
+    <h1>Low Vision Aids</h1>
+    <p>De Cure Center offers a range of low vision aids and devices to assist individuals with impaired vision in performing daily tasks and maximizing their remaining sight. Our specialists provide personalized assessments and recommendations for appropriate low vision solutions.</p>
+    ```
+
+* **`services/eye-plastic-surgery.html`:**
+    ```html
+    <h1>Eye Plastic Surgery</h1>
+    <p>The eye plastic surgery department at De Cure Center specializes in cosmetic and reconstructive procedures around the eyes, including eyelid surgery (blepharoplasty), tear duct surgery, and orbital surgery. Our skilled surgeons are dedicated to improving both the function and appearance of the eyes and surrounding structures.</p>
+    ```
+
+* **`services/contact-lens.html`:**
+    ```html
+    <h1>Contact Lens</h1>
+    <p>De Cure Center provides comprehensive contact lens services, including professional fittings for various types of contact lenses, such as soft, rigid gas permeable, and specialty lenses. Our experts ensure optimal comfort, vision correction, and eye health.</p>
+    ```
+
+* **`services/hospitality.html`:**
+    ```html
+    <h1>Hospitality</h1>
+    <p>At De Cure Center, we are committed to providing a comfortable and supportive experience for all our patients and their families. Our hospitality services are designed to ensure a seamless and stress-free visit, assisting with inquiries, appointments, and ensuring a welcoming environment.</p>
+    ```
+
+**Navigation:**
+
+* Verify that the "Services" dropdown menu in the header correctly links to all the individual service sub-pages within the `services/` directory. The main "Services" link in the navigation can link to the `services/index.html` page, which should provide an overview of all services with links to the individual pages.
+
+**Code Modification:**
+
+* Modify the `index.html` file to add the "Featured Services" section with appropriate links.
+* Ensure the HTML content for each service sub-page is correctly placed in its respective file within the `services/` directory.
+* Update the `style.css` file to style the new "Featured Services" section and the language selector appropriately, ensuring responsiveness.
+* Add the necessary JavaScript code to your JavaScript file (or within `<script>` tags in the HTML) to implement the Google Translate functionality.
+
+**Goal:** The primary goal is to create a fully functional and informative website for De Cure Center that effectively showcases all its services on the homepage, provides detailed information on dedicated service pages, includes a Google Translate language selector, and adheres to the provided design reference.

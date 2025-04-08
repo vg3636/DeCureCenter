@@ -8,10 +8,10 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
             <h1 className="text-3xl md:text-4xl font-semibold text-primary-600 mb-4">
-              Restore Your Natural Look with Expert Care
+              Comprehensive Eye Care at De Cure Center
             </h1>
             <p className="text-neutral-800 mb-8">
-              Over 5,000 Custom Prosthetic Eyes Fitted by India's Leading Oculists
+              Experience excellence in ophthalmology, vision rehabilitation, and specialized ocular services
             </p>
             <Link href="/contact">
               <Button className="bg-primary-600 hover:bg-primary-700 text-white py-3 px-6">
